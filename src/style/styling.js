@@ -1,0 +1,1 @@
+//this file contain all the information about styling properties like spacing, font-size, font-family, etc. Refer to this file when styling components

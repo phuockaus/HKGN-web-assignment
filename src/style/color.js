@@ -1,0 +1,1 @@
+// this file contain all the color code for the app. While styling component, please don't use color code directly inside the component. Instead, import this file into the component and call the color variable here. 
