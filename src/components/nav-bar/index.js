@@ -3,7 +3,7 @@ import React from 'react'
 //   Switch, Route, Link, useRouteMatch
 // } from 'react-router-dom'
 // import Mainpage from '../main-page'
-import HeaderBar from './components/header_bar'
+import HeaderBar from './components/header_bar/header_bar'
 
 export default function Navbar() {
   // const match = useRouteMatch()
