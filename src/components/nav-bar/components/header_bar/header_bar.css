@@ -13,7 +13,7 @@
 
 .buttons-bar:hover {
   color: var(--dark_gray);
-  transition: all 0.2s;
+  transition: all 0.1s;
 }
 
 #header_bar {
@@ -27,7 +27,13 @@
   width: 50px;
   height: 50px;
   margin: auto;
-  background-color: white;
+  margin-top: 5px;
+}
+
+#header_bar #logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
 
 #header_bar #navbar-buttons {
@@ -40,6 +46,10 @@
 #header_bar #navbar-buttons #cart-button {
   width: 40px;
   height: 40px;
-  background-color: white;
   margin: auto;
+}
+
+#header_bar #navbar-buttons #cart-button #cart-icon {
+  width: 40px;
+  height: 40px;
 }
