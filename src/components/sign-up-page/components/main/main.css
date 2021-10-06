@@ -1,0 +1,12 @@
+.blank_space {
+  width: auto;
+  height: 25px;
+}
+
+#Signupform {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  background-image: url('../../assets/background.jpg');
+  background-repeat: round;
+}

@@ -1,8 +1,8 @@
 import React from 'react'
-import Login from './components/login-page/index'
+import Signup from './components/sign-up-page/index'
 
 function App() {
-  return <Login />
+  return <Signup />
 }
 
 export default App
