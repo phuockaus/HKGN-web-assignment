@@ -1,6 +1,8 @@
 import React from 'react'
-import './login-page.css'
+import Header from './components/header/header'
+import LoginForm from './components/login_form/form'
 import Logo from './assets/logo.jpg'
+import './login-page.css'
 
 // class CreateUser extends Component {
 //   // constructor(props) {
@@ -62,55 +64,18 @@ import Logo from './assets/logo.jpg'
 //     )
 //   }
 // }
+
 export default function Login() {
   return (
     <div className="LoginPage">
-      <div className="HeaderPage">
-        <div>
-          <img src={Logo} alt="Logo" id="Logo" />
-        </div>
-      </div>
+      <Header />
       <div className="MiddlePage">
         <div className="NameLabel">
           <h3 className="Name">CAFE HKGN </h3>
           <h4 className="Slogan">UỐNG CAFE ĐỂ KHÔNG MẤT GỐC </h4>
           <img src={Logo} alt="Logo" id="BigLogo" />
         </div>
-        <div className="LoginForm">
-          <form>
-            <h3 className="HeaderLoginForm">Đăng nhập</h3>
-            <div className="textContainer">
-              <input
-                size="35"
-                type="text"
-                required
-                placeholder="Số điện thoại"
-                // value={this.state.username}
-                // onChange={this.onChangeUsername}
-              />
-            </div>
-            <div className="textContainer">
-              <input
-                size="35"
-                type="password"
-                required
-                placeholder="Mật khẩu"
-                fontSize="40px"
-                // value={this.state.password}
-                // onChange={this.onChangePassword}
-              />
-            </div>
-            <div className="LoginButton">
-              <input type="submit" value="Đăng nhập" id="LoginButton" />
-            </div>
-            <div className="SignUpField">
-              <div className="Question">Chưa có tài khoản? </div>
-              <div className="SignUpButton">
-                <input type="submit" value="Đăng ký" id="SignUpButton" />
-              </div>
-            </div>
-          </form>
-        </div>
+        <LoginForm />
       </div>
     </div>
   )
