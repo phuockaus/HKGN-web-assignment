@@ -4,7 +4,7 @@
 }
 .HeaderPage {
     display: flex;
-    height: 120px;
+    height: 100px;
     background-color: red;
     justify-content: center;
 }
@@ -12,9 +12,11 @@
     display: flex;
     background-color: yellow;
     flex-direction: row;
+    height: 700px;
     background-image: url(./assets/background.jpg);
-    background-size: 1904px 640px;
+    background-size: 1904px 840px;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .LoginForm{
@@ -24,8 +26,7 @@
     flex-direction: column;
     background-color: rgb(167,160,154);
     margin-left: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
 }
 .HeaderLoginForm {
     font-size: 60px;
@@ -83,7 +84,6 @@ input[type="password"]{
 .NameLabel {
     display: flex;
     flex-direction: column;
-    font-family: Arial;
 }
 .Name {
     font-size: 50px;
@@ -102,8 +102,8 @@ input[type="password"]{
 }
 
 #Logo {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin-top: 10px;
     /* margin-left: 250px;
      margin-bottom: 0px;  */
