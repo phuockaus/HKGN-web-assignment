@@ -1,41 +1,6 @@
 import React from 'react'
 import './form.css'
 
-// export default function LoginForm() {
-//   <div className="LoginForm">
-//     <div className="LoginForm">
-//       <form>
-//         <h3 className="HeaderLoginForm">Đăng nhập</h3>
-//         <div className="textContainer">
-//           <input
-//             size="35"
-//             type="text"
-//             required
-//             placeholder="Số điện thoại"
-//           />
-//         </div>
-//         <div className="textContainer">
-//           <input
-//             size="35"
-//             type="password"
-//             required
-//             placeholder="Mật khẩu"
-//             fontSize="40px"
-//           />
-//         </div>
-//         <div className="LoginButton">
-//           <input type="submit" value="Đăng nhập" id="LoginButton" />
-//         </div>
-//         <div className="SignUpField">
-//           <div className="Question">Chưa có tài khoản? </div>
-//           <div className="SignUpButton">
-//             <input type="submit" value="Đăng ký" id="SignUpButton" />
-//           </div>
-//         </div>
-//       </form>
-//     </div>
-//   </div>
-// }
 export default function Form() {
   return (
     <div id="Form">
