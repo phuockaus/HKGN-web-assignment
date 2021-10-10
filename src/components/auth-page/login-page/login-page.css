@@ -1,57 +1,19 @@
 .LoginPage{
     display: flex;
     flex-direction: column;
-}
-.HeaderPage {
-    display: flex;
-    height: 100px;
-    background-color: red;
     justify-content: center;
 }
+
 .MiddlePage {
     display: flex;
     flex-direction: row;
     justify-content: right;
-    height: 800px;
+    height: 869px;
     width: 100%;
     background-image: url(./assets/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 
-.NameLabel {
-    display: flex;
-    flex-direction: column;
-}
-.Name {
-    font-size: 50px;
-    color: blue;
-    width: 800px;
-    margin-left: 450px;
-    margin-top: 100px;
-    margin-bottom: 0px;
-}
-.Slogan {
-    font-size: 40px;
-    color: green;
-    width: 800px;
-    margin-top: 20px;
-    margin-left: 300px;
-}
 
-#Logo {
-    width: 80px;
-    height: 80px;
-    margin-top: 10px;
-    /* margin-left: 250px;
-     margin-bottom: 0px;  */
-    border-radius:50%;
-}
-
-#BigLogo {
-    width: 300px;
-    height: 300px;
-    margin-top: 0px;
-    margin-left: 440px;
-    border-radius:50%;
-}

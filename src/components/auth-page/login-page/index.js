@@ -8,11 +8,6 @@ export default function Login() {
     <div className="LoginPage">
       <Header />
       <div className="MiddlePage">
-        <div className="NameLabel">
-          {/* <h3 className="Name">CAFE HKGN </h3>
-          <h4 className="Slogan">UỐNG CAFE ĐỂ KHÔNG MẤT GỐC </h4> */}
-          {/* <img src={Logo} alt="Logo" id="BigLogo" /> */}
-        </div>
         <Form />
       </div>
     </div>

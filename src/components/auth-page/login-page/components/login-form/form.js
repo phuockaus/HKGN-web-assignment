@@ -39,16 +39,16 @@ import './form.css'
 export default function Form() {
   return (
     <div id="Form">
+      <div id="FormHeader">Đăng nhập</div>
       <form>
-        <div id="FormHeader">Đăng nhập</div>
-        <div id="textContainer">
+        <div className="textContainer">
           <input
             type="text"
             required
             placeholder="Số điện thoại"
           />
         </div>
-        <div id="textContainer">
+        <div className="textContainer">
           <input
             type="password"
             required
