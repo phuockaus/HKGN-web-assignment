@@ -1,7 +1,8 @@
 import React from 'react'
+import Signup from './components/sign-up-page/index'
 
 function App() {
-  return <div>this is the beginning of app</div>
+  return <Signup />
 }
 
 export default App
