@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './signupform.css'
-import submit from '../../../utils/signup'
+import submit from '../../../../utils/signup'
 
 export default function Signupform() {
   const [details, setDetails] = useState({
@@ -85,7 +85,7 @@ export default function Signupform() {
           onChange={(event) => setDetails({ ...details, address: event.target.value })}
           onFocus={handleFocus}
         />
-        <input className="button" type="submit" value="Đăng ký" />
+        <input className="button" id="sign-up-button" type="submit" value="Đăng ký" />
       </form>
       <div id="signup-error" />
     </div>
