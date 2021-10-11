@@ -4,17 +4,17 @@ import login from '../../../../../utils/login'
 
 export default function Form() {
   const [details, setDetails] = useState({
-    phoneNumber: '', password: ''
+    phone_number: '', password: ''
   })
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    document.getElementById('signup-error').innerHTML = login(details)
+    login(details)
   }
 
-  const handleFocus = () => {
-    document.getElementById('signup-error').innerHTML = ' '
-  }
+  // const handleFocus = () => {
+  //   document.getElementById('signup-error').innerHTML = ''
+  // }
 
   return (
     <div id="Form">
@@ -26,9 +26,9 @@ export default function Form() {
             required
             placeholder="Số điện thoại"
             onChange={(event) => {
-              setDetails({ ...details, phoneNumber: event.target.value })
+              setDetails({ ...details, phone_number: event.target.value })
             }}
-            onFocus={handleFocus}
+            // onFocus={handleFocus}
           />
         </div>
         <div className="textContainer">
@@ -36,8 +36,8 @@ export default function Form() {
             type="password"
             required
             placeholder="Mật khẩu"
-            onChange={(event) => setDetails({ ...details, pass: event.target.value })}
-            onFocus={handleFocus}
+            onChange={(event) => setDetails({ ...details, password: event.target.value })}
+            // onFocus={handleFocus}
           />
         </div>
         <div id="LoginButton">
