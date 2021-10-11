@@ -1,7 +1,5 @@
 import getAccount from './getAccount'
 
-// const fs = require('fs')
-
 export default function login(details) {
   let userpassword = ''
   getAccount(details.phone_number)
@@ -11,11 +9,10 @@ export default function login(details) {
         if (userpassword === details.password) {
           console.log('True pass')
         } else {
-          console.log('Wrong')
           window.alert('Wrong password')
         }
       } else {
-        console.log('No number found')
+        window.alert('Cannot find your account')
       }
     })
     .catch((err) => { console.log(err) })
