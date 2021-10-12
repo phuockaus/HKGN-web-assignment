@@ -1,5 +1,4 @@
 import React from 'react'
-import './login-page.css'
 import Header from './components/header/header'
 import Main from './components/main/main'
 

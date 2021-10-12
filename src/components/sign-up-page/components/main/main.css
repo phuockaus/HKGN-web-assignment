@@ -1,0 +1,30 @@
+.blank_space {
+  width: auto;
+  height: 25px;
+}
+
+.button {
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background: var(--button_grey);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--button_grey_hover);
+  color: black;
+  transition: all 0.25s;
+}
+
+#Signupform {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  background-image: url('../../assets/background.jpg');
+  background-repeat: round;
+  height: 100%;
+}

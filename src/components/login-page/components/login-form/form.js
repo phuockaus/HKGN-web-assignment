@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './form.css'
-import login from '../../../../../utils/login'
+import login from '../../../../utils/login'
 
 export default function Form() {
   const [details, setDetails] = useState({
@@ -11,10 +11,6 @@ export default function Form() {
     event.preventDefault()
     login(details)
   }
-
-  // const handleFocus = () => {
-  //   document.getElementById('signup-error').innerHTML = ''
-  // }
 
   return (
     <div id="Form">
@@ -28,7 +24,6 @@ export default function Form() {
             onChange={(event) => {
               setDetails({ ...details, phone_number: event.target.value })
             }}
-            // onFocus={handleFocus}
           />
         </div>
         <div className="textContainer">
@@ -37,7 +32,6 @@ export default function Form() {
             required
             placeholder="Mật khẩu"
             onChange={(event) => setDetails({ ...details, password: event.target.value })}
-            // onFocus={handleFocus}
           />
         </div>
         <div id="LoginButton">
