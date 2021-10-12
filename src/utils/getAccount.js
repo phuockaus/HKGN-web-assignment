@@ -1,13 +1,10 @@
 const axios = require('axios')
 
-export default function getAccount(phoneNumber) {
-  axios.get(`http://localhost:3000/account/${phoneNumber}`)
-    .then((response) => {
-      // eslint-disable-next-line no-console
-      console.log(response.data)
-    })
-    .catch((error) => {
-      // eslint-disable-next-line no-console
-      console.log(error)
-    })
+export default async function getAccount(phoneNumber) {
+  const promise = axios.get(`http://localhost:3000/account/${phoneNumber}`)
+  const dataPromise = promise
+    .then((response) => response.data)
+    // eslint-disable-next-line no-console
+    .catch((error) => console.log(error.data))
+  return dataPromise
 }
