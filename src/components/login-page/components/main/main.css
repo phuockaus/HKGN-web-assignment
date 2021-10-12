@@ -1,16 +1,19 @@
 .LoginPage {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .MiddlePage {
   display: flex;
-  background-color: yellow;
   flex-direction: row;
-  background-image: url(./assets/background.jpg);
-  background-size: 1904px 640px;
-  background-repeat: no-repeat;
+  justify-content: right;
+  height: 700px;
+  width: 100%;
+  background-image: url(../../assets/background.jpg);
+  background-repeat: round;
 }
+
 .NameLabel {
   display: flex;
   flex-direction: column;

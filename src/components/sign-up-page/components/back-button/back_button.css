@@ -1,9 +1,8 @@
 #back-button {
   position: absolute;
-  height: 40px;
   width: 80px;
   text-align: center;
-  top: 20px;
+  top: 25px;
   left: 10px;
 }
 

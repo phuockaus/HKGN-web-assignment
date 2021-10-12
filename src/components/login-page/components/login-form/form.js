@@ -39,7 +39,7 @@ export default function Form() {
         </div>
         <div id="SignUp">
           <div>Chưa có tài khoản? </div>
-          <div><a href="www.google.com">Đăng ký </a></div>
+          <div><a href="/signup">Đăng ký</a></div>
         </div>
       </form>
     </div>

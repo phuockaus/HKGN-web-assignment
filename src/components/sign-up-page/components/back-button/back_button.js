@@ -4,7 +4,7 @@ import './back_button.css'
 export default function BackButton() {
   return (
     <div id="back-button">
-      <a href="/">Back</a>
+      <a href="/login">Back</a>
     </div>
   )
 }

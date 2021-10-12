@@ -2,9 +2,8 @@ import React from 'react'
 import {
   Switch, Route, Redirect, BrowserRouter as Router
 } from 'react-router-dom'
+import Login from './components/login-page'
 import Signup from './components/sign-up-page'
-
-// import LoginForm from './components/login-page/components/login_form/form'
 
 function App() {
   return (
@@ -14,6 +13,9 @@ function App() {
           <Redirect to="/login" />
         </Route>
         <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/signup">
           <Signup />
         </Route>
       </Switch>
