@@ -1,0 +1,23 @@
+#home-page-container {
+  padding: 100px 0;
+  width: 90%;
+  margin: auto;
+}
+#home-page-sub-content {
+  margin: auto;
+  overflow: hidden;
+}
+
+#home-page-left-column {
+  width: 20%;
+  float: left;
+}
+
+#search-bar-container {
+  margin-bottom: 1em;
+}
+
+#news-feed-container {
+  width: 75%;
+  float: right;
+}
