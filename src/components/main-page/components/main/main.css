@@ -1,23 +1,15 @@
 #home-page-container {
-  padding: 100px 0;
-  width: 90%;
+  padding-top: 100px;
+  min-height: 700px;
+  background-image: url('../assets/background.jpg');
+  background-repeat: round;
+}
+#home-page-content {
+  width: 75%;
   margin: auto;
-}
-#home-page-sub-content {
-  margin: auto;
-  overflow: hidden;
-}
-
-#home-page-left-column {
-  width: 25%;
-  float: left;
-}
-
-#search-bar-container {
-  margin-bottom: 1em;
 }
 
 #news-feed-container {
-  width: 75%;
+  width: 100%;
   float: right;
 }
