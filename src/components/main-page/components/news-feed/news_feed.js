@@ -1,7 +1,23 @@
 import React from 'react'
 import './news_feed.css'
+import NewsTemplate from '../news-template/news_template'
 
 export default function NewsFeed() {
+  const news = ([
+    {
+      name: 'N1'
+    },
+    {
+      name: 'N2'
+    },
+    {
+      name: 'N3'
+    },
+    {
+      name: 'N4'
+    }
+  ])
+  const newsList = news.map((n) => <NewsTemplate prop={n.name} />)
   return (
     <div id="news-feed">
       <div id="main-news">
@@ -11,10 +27,7 @@ export default function NewsFeed() {
         </div>
       </div>
       <div id="sub-feeds">
-        <div id="sub-feed-1" />
-        <div id="sub-feed-2" />
-        <div id="sub-feed-3" />
-        <div id="sub-feed-4" />
+        {newsList}
       </div>
     </div>
   )

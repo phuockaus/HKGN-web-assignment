@@ -1,0 +1,15 @@
+#best-products-list {
+  background-color: var(--white_background);
+  width: 100%;
+  min-height: 200px;
+  overflow: hidden;
+  border-radius: 15px 0 0 0;
+}
+
+#best-products-area-title {
+  padding: 8px;
+  font-size: 16px;
+  background-color: var(--light_blue);
+  border-radius: 15px;
+  width: 25%;
+}

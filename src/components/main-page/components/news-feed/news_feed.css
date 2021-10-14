@@ -25,38 +25,23 @@
   height: 220px;
 }
 
-#sub-feed-1 {
+.sub-feed {
   float: left;
   width: 49%;
   height: 105px;
   background-color: var(--button_grey_hover);
+  border-radius: 15px;
+}
+
+#sub-feed-1 {
   margin-right: 2%;
   margin-bottom: 10px;
-  border-radius: 15px;
 }
 
 #sub-feed-2 {
-  float: left;
-  width: 49%;
-  height: 105px;
-  background-color: var(--button_grey_hover);
   margin-bottom: 10px;
-  border-radius: 15px;
 }
 
 #sub-feed-3 {
-  float: left;
-  width: 49%;
-  height: 105px;
-  background-color: var(--button_grey_hover);
   margin-right: 2%;
-  border-radius: 15px;
-}
-
-#sub-feed-4 {
-  float: left;
-  width: 49%;
-  height: 105px;
-  background-color: var(--button_grey_hover);
-  border-radius: 15px;
 }

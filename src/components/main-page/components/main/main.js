@@ -10,7 +10,7 @@ export default function Main() {
         <div id="news-feed-container">
           <NewsFeed />
         </div>
-        <div id="products-list-container">
+        <div id="best-products-list-container">
           <ProductList />
         </div>
       </div>

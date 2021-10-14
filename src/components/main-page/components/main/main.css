@@ -1,5 +1,5 @@
 #home-page-container {
-  padding-top: 100px;
+  padding: 100px 0 40px;
   min-height: 700px;
   background-image: url('../assets/background.jpg');
   background-repeat: round;
@@ -11,5 +11,9 @@
 
 #news-feed-container {
   width: 100%;
-  float: right;
+  height: 250px;
+}
+
+#best-products-list-container {
+  width: 100%;
 }
