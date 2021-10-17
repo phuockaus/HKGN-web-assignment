@@ -7,15 +7,15 @@
   background-color: var(--button_grey_hover);
   width: 50%;
   height: 220px;
-  border-radius: 15px;
+  border-radius: 5px;
   float: left;
 }
 
 #main-news-area-title {
   padding: 8px;
   font-size: 16px;
-  background-color: var(--light_blue);
-  border-radius: 15px;
+  background-image: linear-gradient(var(--dark_blue), var(--light_blue));
+  border-radius: 5px;
   width: 25%;
 }
 
@@ -30,7 +30,7 @@
   width: 49%;
   height: 105px;
   background-color: var(--button_grey_hover);
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 #sub-feed-1 {
