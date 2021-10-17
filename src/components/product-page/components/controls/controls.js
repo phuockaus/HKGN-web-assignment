@@ -9,7 +9,7 @@ export default function controlButtons() {
         <div id="amount-control">
           <div>Số lượng</div>
           <QuantityControl />
-          <div>(10 sản phẩm còn lại)</div>
+          <div> (10 sản phẩm còn lại)</div>
         </div>
         <div id="buttons-container">
           <div className="button_t">Thêm vào giỏ hàng</div>

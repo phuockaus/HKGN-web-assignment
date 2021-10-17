@@ -33,7 +33,7 @@
   margin-top: 20%;
   font-size: 40px;
   font-weight: bold;
-  color: red
+  color: var(--light_blue);
 }
 #description {
   width: 100%;
