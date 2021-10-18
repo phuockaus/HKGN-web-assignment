@@ -19,10 +19,8 @@
   font-weight: bold;
 }
 #product-img{
-  margin: 5%;
-  width: auto;
-  height: 500px;
-  /* border: 1px solid; */
+  display: flex;
+  justify-content: center;
 }
 
 #description-container{
