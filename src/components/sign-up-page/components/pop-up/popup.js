@@ -6,7 +6,7 @@ export default function Popup() {
     <div id="pop-up-container">
       <div id="pop-up-content">
         <h2>Đăng ký thành công</h2>
-        <a className="button" href="/">Đăng nhập</a>
+        <a className="button" href="/login">Đăng nhập</a>
       </div>
     </div>
   )
