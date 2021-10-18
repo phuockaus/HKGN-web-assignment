@@ -1,0 +1,13 @@
+.news-template {
+  float: left;
+  width: 48%;
+  padding: 0px 1% 10px;
+}
+
+#news-template-content {
+  width: 100%;
+  height: 105px;
+  background-color: var(--button_grey_hover);
+  border-radius: 5px;
+  text-align: center;
+}
