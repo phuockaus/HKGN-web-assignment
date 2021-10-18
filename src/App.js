@@ -5,6 +5,7 @@ import {
 import Login from './components/login-page'
 import Homepage from './components/main-page'
 import Signup from './components/sign-up-page'
+import Product from './components/product-page'
 
 function App() {
   return (
@@ -15,12 +16,16 @@ function App() {
         </Route>
         <Route path="/home">
           <Homepage />
+          <Redirect to="/home/product" />
         </Route>
         <Route path="/login">
           <Login />
         </Route>
         <Route path="/signup">
           <Signup />
+        </Route>
+        <Route path="/home/product">
+          <Product />
         </Route>
       </Switch>
     </Router>

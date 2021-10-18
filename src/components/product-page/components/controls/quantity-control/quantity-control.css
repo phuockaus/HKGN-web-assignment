@@ -1,0 +1,17 @@
+#quantity-control{
+  height: 30px;
+  margin-left: 10px;
+  width: 30%;
+}
+#quantity {
+  width: 80%;
+}
+input[type='number'] {
+  padding: 10px 0px;
+  font-size: 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
