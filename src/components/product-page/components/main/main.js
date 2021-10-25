@@ -18,7 +18,7 @@ export default function Main() {
     return null
   }
   const showproduct = (prod) => {
-    if (prod) return <Product props={prod[0]} />
+    if (prod) return <Product props={prod[1]} />
     return null
   }
   const controller = (prod) => {

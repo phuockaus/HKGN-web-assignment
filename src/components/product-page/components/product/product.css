@@ -18,11 +18,17 @@
   font-size: 30px;
   font-weight: bold;
 }
+#product-img-container{
+  display: flex;
+  justify-content: right;
+  width: 80%;
+}
 #product-img{
   display: flex;
   justify-content: center;
+  width: 80%;
+  border: 1px solid black;
 }
-
 #description-container{
   width: 40%;
   height: auto;

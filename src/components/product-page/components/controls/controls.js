@@ -1,6 +1,6 @@
 import React from 'react'
 import './controls.css'
-import QuantityControl from './quantity-control/quantity-control'
+import QuantityControl from '../quantity-control/quantity-control'
 
 export default function controlButtons({ props }) {
   const stock = Number(props.stock)

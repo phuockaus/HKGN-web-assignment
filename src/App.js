@@ -3,7 +3,7 @@ import {
   Switch, Route, Redirect, BrowserRouter as Router
 } from 'react-router-dom'
 import Login from './components/login-page'
-import Homepage from './components/main-page'
+// import Homepage from './components/main-page'
 import Signup from './components/sign-up-page'
 import Product from './components/product-page'
 
@@ -15,7 +15,7 @@ function App() {
           <Redirect to="/home" />
         </Route>
         <Route path="/home">
-          <Homepage />
+          <Product />
           <Redirect to="/home/product" />
         </Route>
         <Route path="/login">

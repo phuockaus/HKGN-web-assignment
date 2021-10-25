@@ -8,13 +8,13 @@ export default function Product({ props }) {
     <div id="product-container">
       <div id="img-container">
         <div id="product-name">{props.name}</div>
-        <div id="product-img">
-          <img src={props.image_link} alt="product" />
+        <div id="product-img-container">
+          <img src={props.image_link} alt="product" id="product-img" />
         </div>
       </div>
       <div id="description-container">
         <div id="price">
-          Giá: &nbsp;
+          <span>Giá: </span>
           {price}
           &nbsp;
           đồng
