@@ -1,18 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import './product_list.css'
 import ProductTemplate from '../product-template/product_template'
-import getProduct from '../../../../utils/getProduct'
+import { AppContext } from '../../../../utils/contextControl'
 
 export default function ProductList() {
-  const [products, setProducts] = useState(false)
-  useEffect(() => {
-    getProduct()
-      .then((data) => {
-        setProducts(data)
-      })
-  }, [])
-
-  const productList = (prod) => {
+  const { productList } = useContext(AppContext)
+  const prodList = (prod) => {
     if (prod) return prod.map((product) => <ProductTemplate prop={product} />)
     return null
   }
@@ -21,7 +14,7 @@ export default function ProductList() {
     <div id="best-products-list">
       <div id="best-products-area-title">Sản phẩm nổi bật</div>
       <div id="best-products-items">
-        {productList(products)}
+        {prodList(productList)}
       </div>
     </div>
   )
