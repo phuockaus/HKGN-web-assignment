@@ -7,7 +7,7 @@ import axios from 'axios'
 
 export const AppContext = createContext()
 
-const AppProvider = (props) => {
+export const AppProvider = (props) => {
   const [productList, setProductList] = useState()
   const [cart, setCart] = useState([])
   const [isLoggedIn, setIsLoggedIn] = useState(false)
