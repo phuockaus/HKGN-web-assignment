@@ -6,7 +6,8 @@ import { AppProvider } from './utils/contextControl'
 import Login from './components/login-page'
 import Homepage from './components/main-page'
 import Signup from './components/sign-up-page'
-import Product from './components/product-page'
+import ProductInfo from './components/product-page'
+import Catalogue from './components/product-catalogue'
 
 function App() {
   return (
@@ -18,7 +19,6 @@ function App() {
           </Route>
           <Route path="/home">
             <Homepage />
-            <Redirect to="/home/product" />
           </Route>
           <Route path="/login">
             <Login />
@@ -26,8 +26,11 @@ function App() {
           <Route path="/signup">
             <Signup />
           </Route>
-          <Route path="/home/product">
-            <Product />
+          <Route path="/product">
+            <ProductInfo />
+          </Route>
+          <Route path="/catalogue">
+            <Catalogue />
           </Route>
         </Switch>
       </Router>
