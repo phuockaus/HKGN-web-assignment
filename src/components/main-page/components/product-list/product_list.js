@@ -13,7 +13,7 @@ export default function ProductList() {
   }, [])
 
   const productList = (prod) => {
-    if (prod) return products.map((product) => <ProductTemplate prop={product} />)
+    if (prod) return prod.map((product) => <ProductTemplate prop={product} />)
     return null
   }
 
