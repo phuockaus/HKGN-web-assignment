@@ -10,6 +10,7 @@ export const AppContext = createContext()
 const AppProvider = (props) => {
   const [productList, setProductList] = useState()
   const [cart, setCart] = useState([])
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
   // each element in cart is in the form of
   // {
   //   productID: x,
@@ -66,7 +67,9 @@ const AppProvider = (props) => {
         cart,
         productList,
         addItemToCart,
-        removeItemFromCart
+        removeItemFromCart,
+        isLoggedIn,
+        setIsLoggedIn
       }}
     >
       {props.children}
