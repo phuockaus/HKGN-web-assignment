@@ -2,7 +2,7 @@ import React from 'react'
 import {
   Switch, Route, Redirect, BrowserRouter as Router
 } from 'react-router-dom'
-import AppProvider from './utils/contextControl'
+import { AppProvider } from './utils/contextControl'
 import Login from './components/login-page'
 import Homepage from './components/main-page'
 import Signup from './components/sign-up-page'
