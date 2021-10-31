@@ -8,14 +8,11 @@ export default function controlButtons({ props }) {
     <div id="controls-container">
       <form id="buy-form">
         <div id="amount-control">
-          <div>Số lượng</div>
+          <span>Số lượng </span>
           <QuantityControl props={props.stock} />
-          <div>
-            (
-            {stock}
-            &nbsp;
-            sản phẩm còn lại)
-          </div>
+          <span>
+            {`(${stock} sản phẩm còn lại)`}
+          </span>
         </div>
         <div id="buttons-container">
           <div className="button_t">Thêm vào giỏ hàng</div>
