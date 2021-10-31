@@ -4,7 +4,7 @@ import {
 } from 'react-router-dom'
 import { AppProvider } from './utils/contextControl'
 import Login from './components/login-page'
-import Homepage from './components/main-page'
+// import Homepage from './components/main-page'
 import Signup from './components/sign-up-page'
 import Product from './components/product-page'
 
