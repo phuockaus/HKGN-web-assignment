@@ -1,19 +1,20 @@
-#best-products-list {
+#catalogue-products-list {
   width: 100%;
   min-height: 200px;
   overflow: hidden;
   border-radius: 5px 0 0 0;
 }
 
-#best-products-area-title {
+#catalogue-products-area-title {
   padding: 8px;
   font-size: 16px;
+  font-weight: 500;
   background-image: linear-gradient(var(--dark_blue), var(--light_blue));
   border-radius: 5px;
   box-shadow: 0 0 2px grey;
   width: 25%;
 }
 
-#best-products-items {
-  padding-top: 20px;
+#catalogue-products-items {
+  padding-top: 10px;
 }

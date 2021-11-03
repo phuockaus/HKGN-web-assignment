@@ -6,7 +6,7 @@
   --title_gray: #3b414b;
   --white_background: #f6f7f9;
   --text_form: #748194;
-  --button_grey: #333;
+  --button_grey: rgb(85, 85, 85);
   --button_grey_hover: #a3a3a3;
 }
 

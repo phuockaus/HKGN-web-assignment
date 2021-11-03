@@ -45,7 +45,7 @@ export default function FilterSearchBar({ filter }) {
         <input
           className="search-filter-item"
           type="text"
-          placeholder="Nhập tên sản phẩm"
+          placeholder="Tìm kiếm sản phẩm..."
           name="name"
           value={details.search_name}
           onChange={(event) => {
@@ -102,41 +102,48 @@ export default function FilterSearchBar({ filter }) {
           />
           <label htmlFor="cat">Máy pha cà phê</label>
         </div>
-
-        <select
-          className="search-filter-item"
-          value={details.cost}
-          onChange={(event) => {
-            setDetails({ ...details, cost: event.target.value })
-          }}
-        >
-          <option value="none">Giá</option>
-          <option value="less">Dưới 100.000</option>
-          <option value="equal1">Từ 100.000 đến 500.000</option>
-          <option value="equal2">Từ 500.000 đến 1.000.000</option>
-          <option value="more">Trên 1.000.000</option>
-        </select>
-        <select
-          className="search-filter-item"
-          value={details.rate}
-          onChange={(event) => {
-            setDetails({ ...details, rate: event.target.value })
-          }}
-        >
-          <option value="none">Đánh giá</option>
-          <option value="1">Dưới 1 sao</option>
-          <option value="2">Từ 1-2 sao</option>
-          <option value="3">Từ 2-3 sao</option>
-          <option value="4">Từ 3-4 sao</option>
-          <option value="5">Từ 4-5 sao</option>
-        </select>
+        <div id="filter-cost-area">
+          <select
+            className="search-filter-item"
+            value={details.cost}
+            onChange={(event) => {
+              setDetails({ ...details, cost: event.target.value })
+            }}
+          >
+            <option value="none">Giá</option>
+            <option value="less">Dưới 100.000</option>
+            <option value="equal1">Từ 100.000 đến 500.000</option>
+            <option value="equal2">Từ 500.000 đến 1.000.000</option>
+            <option value="more">Trên 1.000.000</option>
+          </select>
+        </div>
+        <div id="filter-rate-area">
+          <select
+            className="search-filter-item"
+            value={details.rate}
+            onChange={(event) => {
+              setDetails({ ...details, rate: event.target.value })
+            }}
+          >
+            <option value="none">Đánh giá</option>
+            <option value="1">Dưới 1 sao</option>
+            <option value="2">Từ 1-2 sao</option>
+            <option value="3">Từ 2-3 sao</option>
+            <option value="4">Từ 3-4 sao</option>
+            <option value="5">Từ 4-5 sao</option>
+          </select>
+        </div>
       </div>
       <input
+        id="filter-search"
+        className="button"
         type="button"
         value="Tìm kiếm"
         onClick={search}
       />
       <input
+        id="filter-reset"
+        className="button"
         type="button"
         value="Đặt lại"
         onClick={reset}

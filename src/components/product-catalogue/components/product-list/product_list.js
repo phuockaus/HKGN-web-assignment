@@ -10,9 +10,9 @@ export default function ProductsList({ filterProducts }) {
   }
 
   return (
-    <div id="best-products-list">
-      <div id="best-products-area-title">Sản phẩm nổi bật</div>
-      <div id="best-products-items">
+    <div id="catalogue-products-list">
+      <div id="catalogue-products-area-title">Danh mục sản phẩm</div>
+      <div id="catalogue-products-items">
         {prodList(filterProducts)}
       </div>
     </div>
