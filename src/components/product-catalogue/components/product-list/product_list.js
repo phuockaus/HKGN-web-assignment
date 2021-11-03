@@ -1,10 +1,9 @@
-import React, { useContext } from 'react'
+/* eslint-disable react/prop-types */
+import React from 'react'
 import './product_list.css'
 import ProductTemplate from '../product-template/product_template'
-import { AppContext } from '../../../../utils/contextControl'
 
-export default function ProductList() {
-  const { searchProducts } = useContext(AppContext)
+export default function ProductsList({ filterProducts }) {
   const prodList = (prod) => {
     if (prod) return prod.map((product) => <ProductTemplate prop={product} />)
     return null
@@ -14,7 +13,7 @@ export default function ProductList() {
     <div id="best-products-list">
       <div id="best-products-area-title">Sản phẩm nổi bật</div>
       <div id="best-products-items">
-        {prodList(searchProducts)}
+        {prodList(filterProducts)}
       </div>
     </div>
   )

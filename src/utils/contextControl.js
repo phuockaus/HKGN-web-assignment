@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-syntax */
@@ -11,7 +12,6 @@ export const AppProvider = (props) => {
   const [productList, setProductList] = useState()
   const [cart, setCart] = useState([])
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const [searchProducts, setFilterProducts] = useState()
 
   async function fetchProductList() {
     try {
@@ -58,18 +58,6 @@ export const AppProvider = (props) => {
     }
   }
 
-  const filterProducts = (filter) => {
-    let list = productList
-    if (filter.search_name !== '') list = list.filter((prod) => prod.name.toLowerCase().includes(filter.search_name.toLowerCase()))
-    if (filter.cate_1 || filter.cate_2 || filter.cate_3 || filter.cate_4) {
-      if (!filter.cate_1) list = list.filter((prod) => prod.category !== 'caphebot')
-      if (!filter.cate_2) list = list.filter((prod) => prod.category !== 'caphehoatan')
-      if (!filter.cate_3) list = list.filter((prod) => prod.category !== 'dungcucaphe')
-      if (!filter.cate_4) list = list.filter((prod) => prod.category !== 'mayphacaphe')
-    }
-    setFilterProducts(list)
-  }
-
   return (
     <AppContext.Provider
       value={{
@@ -78,9 +66,7 @@ export const AppProvider = (props) => {
         addItemToCart,
         removeItemFromCart,
         isLoggedIn,
-        setIsLoggedIn,
-        searchProducts,
-        filterProducts
+        setIsLoggedIn
       }}
     >
       {props.children}
