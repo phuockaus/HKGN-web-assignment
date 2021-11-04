@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-syntax */
@@ -11,16 +12,12 @@ export const AppProvider = (props) => {
   const [productList, setProductList] = useState()
   const [cart, setCart] = useState([])
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-  // each element in cart is in the form of
-  // {
-  //   productID: x,
-  //   quantity: y
-  // }
 
   async function fetchProductList() {
     try {
       const response = await axios.get('http://localhost:3000/product')
       setProductList(response.data)
+      setFilterProducts(response.data)
     } catch (err) {
       // eslint-disable-next-line no-console
       console.log(err)
