@@ -26,9 +26,13 @@ export default function Main({ productId }) {
 
   return (
     <div id="main-container">
-      <div>
-        {miniRouter(productList)}
-        {showproduct(productList)}
+      <div id="product-info-content-area">
+        <div id="mini-router-area">
+          {miniRouter(productList)}
+        </div>
+        <div id="info-area">
+          {showproduct(productList)}
+        </div>
       </div>
     </div>
   )
