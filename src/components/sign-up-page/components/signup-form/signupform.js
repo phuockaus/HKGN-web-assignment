@@ -85,7 +85,7 @@ export default function Signupform() {
           onChange={(event) => setDetails({ ...details, address: event.target.value })}
           onFocus={handleFocus}
         />
-        <input className="button" id="sign-up-button" type="submit" value="Đăng ký" />
+        <input className="btn" id="sign-up-button" type="submit" value="Đăng ký" />
       </form>
       <div id="signup-error" />
     </div>

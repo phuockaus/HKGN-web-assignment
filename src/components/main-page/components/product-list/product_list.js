@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import './product_list.css'
-import ProductTemplate from '../product-template/product_template'
+import ProductTemplate from '../../../product-catalogue/components/product-template/product_template'
 import { AppContext } from '../../../../utils/contextControl'
 
 export default function ProductList() {

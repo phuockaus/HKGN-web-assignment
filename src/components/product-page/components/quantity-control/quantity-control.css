@@ -1,17 +1,16 @@
-#quantity-control{
-  height: 30px;
-  margin-left: 10px;
-  width: 30%;
+#quantity-control {
+  display: inline-block;
+  margin-left: 1%;
+  width: 20%;
 }
+
 #quantity {
   width: 80%;
 }
+
 input[type='number'] {
-  padding: 5px 0px;
-  font-size: 20px;
+  padding: 5px 5px;
+  font-size: 14px;
   text-decoration: none;
   border-radius: 5px;
-  font-weight: bold;
-  align-items: center;
-  justify-content: center;
 }

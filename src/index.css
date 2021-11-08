@@ -13,6 +13,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--white_background);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -26,6 +27,22 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.btn {
+  font-weight: bold;
+  border-radius: 2px;
+  background-color: var(--dark_blue);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: var(--light_blue);
+  color: black;
+  transition: all 0.25s;
 }
 
 @-webkit-keyframes fadeIn {
