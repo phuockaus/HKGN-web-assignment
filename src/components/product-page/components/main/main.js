@@ -18,6 +18,7 @@ export default function Main({ productId }) {
     if (prod) return <MiniRouter props={product[0]} />
     return null
   }
+
   const showproduct = (prod) => {
     if (prod) return <Product props={product[0]} />
     return null
