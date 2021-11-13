@@ -1,10 +1,8 @@
-#controls-container {
-}
-
 #amount-control {
   height: 60px;
   width: 100%;
   padding-left: 10px;
+  font-size: 14px;
 }
 
 #btn_view_cart {

@@ -136,14 +136,14 @@ export default function FilterSearchBar({ filter }) {
       </div>
       <input
         id="filter-search"
-        className="button"
+        className="btn"
         type="button"
         value="Tìm kiếm"
         onClick={search}
       />
       <input
         id="filter-reset"
-        className="button"
+        className="btn"
         type="button"
         value="Đặt lại"
         onClick={reset}

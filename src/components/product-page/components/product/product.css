@@ -1,11 +1,7 @@
-#product-image-and-description {
-}
-
 #product-img-container {
   width: 39%;
   height: 550px;
   float: left;
-  /* overflow: scroll; */
 }
 
 #product-img {
@@ -21,11 +17,12 @@
 
 #product-name {
   font-size: 30px;
-  font-weight: 600;
+  color: black;
+  font-weight: 500;
   color: var(--darker_gray);
 }
 #price {
-  font-size: 34px;
+  font-size: 24px;
   color: var(--light_blue);
 }
 #description {
@@ -36,6 +33,7 @@
 #title-info {
   font-weight: 600;
   margin-top: 20px;
+  font-size: 24px;
 }
 
 #description-text {
