@@ -8,6 +8,7 @@ import Homepage from './components/main-page'
 import Signup from './components/sign-up-page'
 import ProductInfo from './components/product-page'
 import Catalogue from './components/product-catalogue'
+import Cart from './components/cart-page'
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path="/catalogue">
             <Catalogue />
+          </Route>
+          <Route path="/cart">
+            <Cart />
           </Route>
         </Switch>
       </Router>
