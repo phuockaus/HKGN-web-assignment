@@ -1,5 +1,4 @@
 #exit-button {
-  margin: 10px 0 0 10px;
   justify-content: center;
   align-items: center;
   height: 30px;
@@ -27,21 +26,25 @@
   width: 90%;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  color: var(--light_blue);
 }
 
 .header1 {
   margin-left: 40%;
   display: flex;
+  text-align: center;
   justify-content: center;
   width: 15%;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
 }
 .header {
   display: flex;
+  text-align: center;
   justify-content: center;
   width: 15%;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -54,9 +57,10 @@
 }
 
 #totalprice {
-  width: 14%;
+  width: 22%;
   margin-right: 20px;
   font-size: 25px;
+  font-weight: bold;
 }
 
 #buy-button {

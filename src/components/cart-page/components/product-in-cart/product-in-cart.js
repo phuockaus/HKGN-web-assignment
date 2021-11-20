@@ -1,76 +1,78 @@
 /* eslint-disable react/prop-types */
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useState } from 'react'
 import './product-in-cart.css'
 import { AppContext } from '../../../../utils/contextControl'
 
-export default function ProductInCart({ props }) {
+export default function ProductInCart({ props, cartPrice, setPrice }) {
   const {
-    cart, productList, addItemToCart, removeItemFromCart
+    productList, removeItemFromCart, addItemToCart
   } = useContext(AppContext)
 
-  // const [tempCart, setTempCart] = useState(cart)
-
-  const updatePage = () => {
-    // window.location.reload()
-    window.alert(`cart change to ${cart}`)
-  }
-
-  useEffect(() => {
-    updatePage()
-  }, [cart])
-
-  const Item = (item) => {
-    if (productList) {
-      for (let i = 0; i < productList.length; i += 1) {
-        if (productList[i].product_ID === item.productID) {
-          const info = {
-            product_ID: productList[i].product_ID,
-            name: productList[i].name,
-            cost: productList[i].cost,
-            image_link: productList[i].image_link,
-            stock: productList[i].stock,
-            quantity: item.quantity
-          }
-          return info
-        }
-      }
-    }
-    return 0
-  }
-
-  const itemInfo = Item(props)
-  const price = Number(itemInfo.cost)
-  const totalPrice = Number(itemInfo.cost) * Number(itemInfo.quantity)
-  // eslint-disable-next-line no-unused-vars
+  const [tempProductList] = useState(
+    productList.filter((product) => product.product_ID === props.productID)
+  )
+  const [tempItem, setTempItem] = useState({
+    productID: props.productID,
+    quantity: parseInt(props.quantity, 10),
+    price: parseInt(tempProductList[0].cost, 10),
+    totalPrice: parseInt(props.quantity, 10) * parseInt(tempProductList[0].cost, 10)
+  })
 
   const removeItem = (itemID) => {
     removeItemFromCart(itemID)
+    document.getElementsByName(props.productID)[0].style.display = 'none'
   }
-  const increase = (itemID) => {
-    const itemToAdd = {
-      productID: itemID,
-      quantity: 1
-    }
-    addItemToCart(itemToAdd)
-    console.log(cart)
-  }
-  const decrease = (itemID) => {
-    const itemToAdd = {
-      productID: itemID,
+
+  const decrease = () => {
+    setTempItem({
+      ...tempItem,
+      quantity: (tempItem.quantity > 1 ? tempItem.quantity - 1 : 1),
+      totalPrice: (
+        tempItem.quantity > 1
+          ? tempItem.totalPrice - parseInt(tempProductList[0].cost, 10)
+          : tempItem.totalPrice
+      )
+    })
+    addItemToCart({
+      productID: tempItem.productID,
       quantity: -1
-    }
-    addItemToCart(itemToAdd)
-    console.log(cart)
+    })
+    setPrice(
+      (tempItem.quantity > 1 ? cartPrice - parseInt(tempProductList[0].cost, 10) : cartPrice)
+    )
   }
+  const increase = () => {
+    setTempItem({
+      ...tempItem,
+      quantity: (
+        tempItem.quantity < tempProductList[0].stock ? tempItem.quantity + 1 : tempItem.quantity
+      ),
+      totalPrice: (
+        tempItem.quantity < tempProductList[0].stock
+          ? tempItem.totalPrice + parseInt(tempProductList[0].cost, 10) : tempItem.totalPrice
+      )
+    })
+    if (tempItem.quantity < tempProductList[0].stock) {
+      addItemToCart({
+        productID: tempItem.productID,
+        quantity: 1
+      })
+    }
+    setPrice(
+      tempItem.quantity < tempProductList[0].stock
+        ? cartPrice + parseInt(tempProductList[0].cost, 10) : cartPrice
+    )
+  }
+
   return (
-    <div id="product-in-cart-container">
+    <div id="product-in-cart-container" name={props.productID}>
       <div id="product-img-in-cart-container">
-        <img src={itemInfo.image_link} alt="product" id="product-in-cart-img" />
+        <img src={tempProductList[0].image_link} alt="product" id="product-in-cart-img" />
       </div>
-      <div id="product-in-cart-name">{itemInfo.name}</div>
+      <div id="product-in-cart-name">{tempProductList[0].name}</div>
       <div id="in-cart-price">
         <div>
-          {price}
+          {tempItem.price}
           <span> đồng</span>
         </div>
       </div>
@@ -80,20 +82,20 @@ export default function ProductInCart({ props }) {
           className="quantity-btn"
           type="button"
           value="-"
-          onClick={() => decrease(itemInfo.product_ID)}
+          onClick={() => decrease()}
         />
-        {itemInfo.quantity}
+        {tempItem.quantity}
         <input
           id="increase-btn"
           className="quantity-btn"
           type="button"
           value="+"
-          onClick={() => increase(itemInfo.product_ID)}
+          onClick={() => increase()}
         />
       </div>
       <div id="in-cart-total">
         <div>
-          {totalPrice}
+          {tempItem.totalPrice}
           <span> đồng</span>
         </div>
       </div>
@@ -103,7 +105,7 @@ export default function ProductInCart({ props }) {
           className="remove-button"
           type="button"
           value="Xóa"
-          onClick={() => removeItem(itemInfo.product_ID)}
+          onClick={() => removeItem(props.productID)}
         />
       </div>
     </div>

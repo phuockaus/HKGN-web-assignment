@@ -38,8 +38,8 @@ export const AppProvider = (props) => {
         let tempQuantity = Number(ele.quantity)
         tempQuantity += Number(item.quantity)
         ele.quantity = tempQuantity
-        if (ele.quantity < 0) {
-          ele.quanttity = 0
+        if (ele.quantity < 1) {
+          ele.quantity = 1
         }
         checkDuplicate = true
         break
@@ -53,7 +53,6 @@ export const AppProvider = (props) => {
 
   const removeItemFromCart = (productID) => {
     const processingCart = cart
-    console.log(`before: ${cart}`)
     let ele
     for (ele of processingCart) {
       if (ele.productID === productID) {
@@ -64,7 +63,6 @@ export const AppProvider = (props) => {
         break
       }
     }
-    console.log(`after: ${cart}`)
   }
 
   return (
