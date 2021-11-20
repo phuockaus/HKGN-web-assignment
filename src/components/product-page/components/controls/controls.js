@@ -5,8 +5,8 @@ import QuantityControl from '../quantity-control/quantity-control'
 export default function controlButtons({ props }) {
   const stock = Number(props.stock)
   return (
-    <div id="controls-container">
-      <form id="buy-form">
+    <div>
+      <form>
         <div id="amount-control">
           <span>Số lượng </span>
           <QuantityControl props={props.stock} />
@@ -15,8 +15,8 @@ export default function controlButtons({ props }) {
           </span>
         </div>
         <div id="buttons-container">
-          <div className="button_t">Thêm vào giỏ hàng</div>
-          <div className="button_t">Xem giỏ hàng</div>
+          <div className="btn" id="btn_add_cart">Thêm vào giỏ hàng</div>
+          <div className="btn" id="btn_view_cart">Xem giỏ hàng</div>
         </div>
       </form>
     </div>

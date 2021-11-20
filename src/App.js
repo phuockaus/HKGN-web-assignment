@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 import React from 'react'
 import {
   Switch, Route, Redirect, BrowserRouter as Router
@@ -29,9 +30,7 @@ function App() {
             <Route path="/signup">
               <Signup />
             </Route>
-            <Route path="/product">
-              <ProductInfo />
-            </Route>
+            <Route path="/product/:id" component={ProductInfo} />
             <Route path="/catalogue">
               <Catalogue />
             </Route>

@@ -1,8 +1,8 @@
 .product-template {
   float: left;
   width: 216px;
-  /* width: 19%; */
   padding: 5px 0.5%;
+  text-decoration: none;
 }
 
 #product-template-content {
@@ -25,7 +25,6 @@
   width: 100%;
   height: 230px;
   border-bottom: 0.5px solid rgb(182, 182, 182);
-  /* box-shadow: 0 0 1px grey; */
 }
 
 #product-template-name {
@@ -33,6 +32,8 @@
   font-size: 12px;
   padding: 0 15px;
   text-align: left;
+  color: grey;
+  font-weight: bold;
 }
 
 #product-template-cost {
