@@ -1,11 +1,8 @@
 import { encode } from 'string-encode-decode'
-import { useCookies } from 'react-cookie'
+import Cookies from 'js-cookie'
 import getAccount from './getAccount'
 
 export default function login(details) {
-  const [cookies, setCookie] = useCookies([
-    'accountID, firstName, lastName, phoneNumber, email, address, coupon, role'
-  ])
   let userpassword = ''
   getAccount(details.phone_number)
     .then((data) => {
@@ -14,17 +11,14 @@ export default function login(details) {
         if (userpassword === details.password) {
           // eslint-disable-next-line no-console
           console.log('True pass')
-          console.log(cookies.phoneNumber)
-          const expireDay = new Date()
-          expireDay.setDate(expireDay.getDate() + 3)
-          setCookie('accountID', encode(String(details.account_ID)), { expires: expireDay })
-          setCookie('firstName', encode(String(details.first_name)), { expires: expireDay })
-          setCookie('lastName', encode(String(details.last_name)), { expires: expireDay })
-          setCookie('phoneNumber', encode(String(details.phone_number)), { expires: expireDay })
-          setCookie('email', encode(String(details.email)), { expires: expireDay })
-          setCookie('address', encode(String(details.address)), { expires: expireDay })
-          setCookie('coupon', encode(String(details.coupon)), { expires: expireDay })
-          setCookie('role', encode(String(details.role)), { expires: expireDay })
+          Cookies.set('accountID', encode(String(data[0].account_ID)), { expires: 3 })
+          Cookies.set('firstName', encode(String(data[0].first_name)), { expires: 3 })
+          Cookies.set('lastName', encode(String(data[0].last_name)), { expires: 3 })
+          Cookies.set('phoneNumber', encode(String(data[0].phone_number)), { expires: 3 })
+          Cookies.set('email', encode(String(data[0].email)), { expires: 3 })
+          Cookies.set('address', encode(String(data[0].address)), { expires: 3 })
+          Cookies.set('coupon', encode(String(data[0].coupon)), { expires: 3 })
+          Cookies.set('role', encode(String(data[0].role)), { expires: 3 })
         } else {
           // eslint-disable-next-line no-alert
           window.alert('Wrong password')
