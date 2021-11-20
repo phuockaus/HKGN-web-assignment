@@ -1,0 +1,42 @@
+#product-list-cart-container {
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+#product-list-cart-header {
+  margin-bottom: 10px;
+  width: 96%;
+  margin: auto;
+  overflow: hidden;
+}
+#empty-title {
+  min-width: 48%;
+  padding: 0 1%;
+  float: left;
+  font-weight: 600;
+}
+
+#product-list-cart-title-1 {
+  float: left;
+  width: 14%;
+  text-align: center;
+  padding: 0 1%;
+  font-weight: 600;
+}
+#product-list-cart-title-2 {
+  float: left;
+  width: 15%;
+  padding: 0 1%;
+  text-align: center;
+  font-weight: 600;
+}
+#product-list-cart-title-3 {
+  float: left;
+  width: 15%;
+  padding: 0 1%;
+  text-align: center;
+  font-weight: 600;
+}
+#product-cart-list-content {
+  width: 100%;
+}
