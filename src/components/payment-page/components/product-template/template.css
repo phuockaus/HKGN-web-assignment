@@ -21,7 +21,7 @@
 #product-template-cart-image img {
   max-height: 80px;
   display: block;
-  background-repeat: round;
+  border-radius: 3px;
 }
 
 #product-template-cart-name {

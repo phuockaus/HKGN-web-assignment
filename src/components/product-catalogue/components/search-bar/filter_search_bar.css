@@ -36,7 +36,8 @@
   display: block;
   padding: 6px 15px;
   margin: 0 2.5%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  border: none;
 }
 #filter-reset {
   width: 45%;
@@ -44,5 +45,6 @@
   display: block;
   padding: 6px 15px;
   margin: 0 2.5%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  border: none;
 }
