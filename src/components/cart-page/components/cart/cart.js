@@ -1,3 +1,5 @@
+/* eslint-disable prefer-const */
+/* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from 'react'
 import ProductInCart from '../product-in-cart/product-in-cart'
 import { AppContext } from '../../../../utils/contextControl'
@@ -5,7 +7,7 @@ import './cart.css'
 
 export default function CartItems() {
   const { cart, addItemToCart, productList } = useContext(AppContext)
-  const [tempCart] = useState(cart)
+  const [tempCart, setTempCart] = useState(cart)
   const [totalPrice, setTotalPrice] = useState(0)
 
   const a0 = {
@@ -14,39 +16,42 @@ export default function CartItems() {
   }
   const a1 = {
     productID: '2',
-    quantity: '3'
+    quantity: '2'
   }
   let total = 0
-  const itemList = (cartlist) => {
-    if (cartlist) {
-      return cartlist.map(
+
+  const itemList = () => {
+    if (tempCart) {
+      return tempCart.map(
+        // eslint-disable-next-line max-len
         (item) => <ProductInCart props={item} cartPrice={totalPrice} setPrice={setTotalPrice} />
       )
     }
     return null
   }
 
-  const calculatePrice = () => {
-    if (productList) {
+  const getTotalPrice = () => {
+    if ((tempCart.length !== 0) && productList) {
+      console.log(tempCart)
       for (let i = 0; i < tempCart.length; i += 1) {
         for (let j = 0; j < productList.length; j += 1) {
           if (productList[j].product_ID === tempCart[i].productID) {
-            total += parseInt(productList[i].cost, 10) * parseInt(tempCart[i].quantity, 10)
+            total += parseInt(productList[j].cost, 10) * parseInt(tempCart[i].quantity, 10)
             setTotalPrice(total)
           }
         }
       }
-    }
-    return null
+    } else setTotalPrice(0)
   }
+
   useEffect(() => {
     if (cart.length === 0) {
-      addItemToCart(a0)
       addItemToCart(a1)
+      addItemToCart(a0)
     }
   }, [])
   useEffect(() => {
-    calculatePrice()
+    getTotalPrice()
   })
   return (
     <div id="cart-list-container">
@@ -58,7 +63,7 @@ export default function CartItems() {
         <div className="header">Xóa</div>
       </div>
       <div id="product-list-container">
-        {itemList(tempCart)}
+        {itemList()}
       </div>
       <div id="controler">
         <div id="totalprice">
