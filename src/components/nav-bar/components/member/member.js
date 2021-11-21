@@ -6,6 +6,7 @@ import {
 import {
   faCartPlus, faUser
 } from '@fortawesome/free-solid-svg-icons'
+import logout from '../../../../utils/logout'
 
 export default function MemberButtons() {
   return (
@@ -20,7 +21,7 @@ export default function MemberButtons() {
           <div id="drop-down-member">
             <a href="/">Thông tin tài khoản</a>
             <a href="/">Đơn hàng của tôi</a>
-            <a href="/">Đăng xuất</a>
+            <a href="/" onClick={logout}>Đăng xuất</a>
           </div>
         </div>
       </div>
