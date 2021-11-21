@@ -31,12 +31,12 @@ export default function ProductInCart({
   //   }
   // }, [])
 
-  // console.log(props)
-  // console.log(tempProductList)
-  // console.log(tempItem)
+  console.log(props)
+  console.log(tempProductList)
+  console.log(tempItem)
   const removeItem = (itemID) => {
+    setPrice(cartPrice - tempItem.totalPrice)
     removeItemFromCart(itemID)
-    setPrice()
     // document.getElementsByName(props.productID)[0].style.display = 'none'
   }
 

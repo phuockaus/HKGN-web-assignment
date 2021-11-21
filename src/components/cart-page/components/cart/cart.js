@@ -12,7 +12,7 @@ export default function CartItems() {
 
   const a0 = {
     productID: '1',
-    quantity: '45'
+    quantity: '1'
   }
   const a1 = {
     productID: '2',
@@ -32,7 +32,6 @@ export default function CartItems() {
 
   const getTotalPrice = () => {
     if ((tempCart.length !== 0) && productList) {
-      console.log(tempCart)
       for (let i = 0; i < tempCart.length; i += 1) {
         for (let j = 0; j < productList.length; j += 1) {
           if (productList[j].product_ID === tempCart[i].productID) {
