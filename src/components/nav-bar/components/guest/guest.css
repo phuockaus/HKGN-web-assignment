@@ -15,4 +15,8 @@
 #cart-icon {
   width: 40px;
   height: 40px;
+  color: black;
+}
+#cart-icon:hover {
+  color: var(--darker_gray);
 }

@@ -6,6 +6,7 @@ import {
 import {
   faCartPlus
 } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 export default function GuestButtons() {
   return (
@@ -16,7 +17,7 @@ export default function GuestButtons() {
         <a className="buttons-bar" href="/login">Đăng nhập</a>
       </div>
       <div id="cart-button">
-        <FontAwesomeIcon icon={faCartPlus} id="cart-icon" />
+        <Link to="/cart"><FontAwesomeIcon icon={faCartPlus} id="cart-icon" /></Link>
       </div>
     </div>
   )

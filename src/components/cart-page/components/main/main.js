@@ -5,10 +5,7 @@ import './main.css'
 export default function MainCart() {
   return (
     <div id="cart-container">
-      <div id="cart-header">Giỏ hàng</div>
-      <div id="cartlist-container">
-        <CartItems />
-      </div>
+      <CartItems />
     </div>
   )
 }

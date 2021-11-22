@@ -8,6 +8,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import Cookies from 'js-cookie'
 import { decode } from 'string-encode-decode'
+import { Link } from 'react-router-dom'
 import logout from '../../../../utils/logout'
 
 export default function MemberButtons() {
@@ -15,14 +16,14 @@ export default function MemberButtons() {
   return (
     <div id="member-buttons">
       <div id="cart-member-button">
-        <FontAwesomeIcon icon={faCartPlus} id="cart-member-icon" />
+        <Link to="/cart"><FontAwesomeIcon icon={faCartPlus} id="cart-member-icon" /></Link>
       </div>
       <div id="user-button">
         <FontAwesomeIcon icon={faUser} id="user-icon" />
         <div id="drop-down-info">
           <div id="member-name">{name}</div>
           <div id="drop-down-member">
-            <a href="/">Thông tin tài khoản</a>
+            <a href="/account-info">Thông tin tài khoản</a>
             <a href="/">Đơn hàng của tôi</a>
             <a href="/" onClick={logout}>Đăng xuất</a>
           </div>

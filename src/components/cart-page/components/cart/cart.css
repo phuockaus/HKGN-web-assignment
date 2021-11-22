@@ -1,20 +1,3 @@
-#exit-button {
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  width: 10%;
-  display: flex;
-  font-weight: bold;
-  border-radius: 5px;
-  outline: none;
-  border: none;
-  background: var(--button_grey);
-  color: white;
-  font-size: 15px;
-  cursor: pointer;
-  text-align: center;
-}
-
 #product-list-container {
   justify-content: center;
 }
@@ -64,5 +47,8 @@
 }
 
 #buy-button {
-  height: 90%;
+  display: block;
+  padding: 18px 24px;
+  text-decoration: none;
+  font-size: 16px;
 }

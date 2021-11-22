@@ -9,20 +9,6 @@ export default function CartItems() {
   } = useContext(AppContext)
   const [totalPrice, setTotalPrice] = useState(0)
   const [itemList, setItemList] = useState([])
-  const a0 = {
-    productID: '1',
-    quantity: '1'
-  }
-  const a1 = {
-    productID: '2',
-    quantity: '2'
-  }
-  useEffect(() => {
-    if (cart.length === 0) {
-      addItemToCart(a1)
-      addItemToCart(a0)
-    }
-  }, [cart, productList])
 
   const getProductInfo = (id) => {
     if (productList) return productList.find((product) => product.product_ID === id)
@@ -111,7 +97,6 @@ export default function CartItems() {
 
   return (
     <div id="cart-list-container">
-      <input type="button" id="exit-button" value="Thoát" onClick={() => { window.location.href = '/catalogue' }} />
       <div id="list-header">
         <div className="header1">Đơn giá</div>
         <div className="header">Số lượng</div>
@@ -127,7 +112,7 @@ export default function CartItems() {
           {totalPrice}
           <span> đồng</span>
         </div>
-        <input type="submit" id="buy-button" value="Mua hàng" />
+        <a href="/payment" className="btn" id="buy-button">Mua hàng</a>
       </div>
     </div>
   )
