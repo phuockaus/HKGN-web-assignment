@@ -6,9 +6,12 @@ import {
 import {
   faCartPlus, faUser
 } from '@fortawesome/free-solid-svg-icons'
+import Cookies from 'js-cookie'
+import { decode } from 'string-encode-decode'
 import logout from '../../../../utils/logout'
 
 export default function MemberButtons() {
+  const name = `${decode(Cookies.get('firstName'))} ${decode(Cookies.get('lastName'))}`
   return (
     <div id="member-buttons">
       <div id="cart-member-button">
@@ -17,7 +20,7 @@ export default function MemberButtons() {
       <div id="user-button">
         <FontAwesomeIcon icon={faUser} id="user-icon" />
         <div id="drop-down-info">
-          <div id="member-name">Đoàn Trần Hữu Phước</div>
+          <div id="member-name">{name}</div>
           <div id="drop-down-member">
             <a href="/">Thông tin tài khoản</a>
             <a href="/">Đơn hàng của tôi</a>
