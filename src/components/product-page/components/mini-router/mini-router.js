@@ -5,13 +5,9 @@ export default function miniRouter({ props }) {
   const type = props.category.charAt(0).toUpperCase() + props.category.slice(1)
   return (
     <div id="miniRouter">
-      <a className="path-bar" href="/home">
-        { type }
-      </a>
+      <div className="path-bar">{type}</div>
       <div className="blank"> &gt; </div>
-      <a className="path-bar" href="/home">
-        { props.name }
-      </a>
+      <div className="path-bar">{ props.name }</div>
     </div>
   )
 }

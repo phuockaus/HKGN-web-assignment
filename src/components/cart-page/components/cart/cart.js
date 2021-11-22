@@ -1,28 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react'
+import Cookies from 'js-cookie'
 import ProductInCart from '../product-in-cart/product-in-cart'
 import { AppContext } from '../../../../utils/contextControl'
 import './cart.css'
+import { decreaseAmount, increaseAmount, removeItemFromCart } from '../../../../utils/cart'
 
 export default function CartItems() {
-  const {
-    cart, addItemToCart, removeItemFromCart, productList
-  } = useContext(AppContext)
+  const { productList } = useContext(AppContext)
+  const cart = JSON.parse(Cookies.get('cart'))
   const [totalPrice, setTotalPrice] = useState(0)
   const [itemList, setItemList] = useState([])
-  const a0 = {
-    productID: '1',
-    quantity: '1'
-  }
-  const a1 = {
-    productID: '2',
-    quantity: '2'
-  }
-  useEffect(() => {
-    if (cart.length === 0) {
-      addItemToCart(a1)
-      addItemToCart(a0)
-    }
-  }, [cart, productList])
 
   const getProductInfo = (id) => {
     if (productList) return productList.find((product) => product.product_ID === id)
@@ -48,6 +35,7 @@ export default function CartItems() {
         lst.push({
           id: cart[i].productID,
           image: product.image_link,
+          description: product.description,
           name: product.name,
           quantity: parseInt(cart[i].quantity, 10),
           cost: parseInt(product.cost, 10),
@@ -70,10 +58,7 @@ export default function CartItems() {
         break
       }
     }
-    addItemToCart({
-      productID: id,
-      quantity: -1
-    })
+    decreaseAmount(id, 1)
     getTotalPrice()
   }
 
@@ -86,10 +71,7 @@ export default function CartItems() {
         break
       }
     }
-    addItemToCart({
-      productID: id,
-      quantity: 1
-    })
+    increaseAmount(id, 1)
     getTotalPrice()
   }
 
@@ -108,26 +90,30 @@ export default function CartItems() {
     if (itemList) return itemList.map((item) => <ProductInCart props={item} increase={increase} decrease={decrease} remove={removeItem} />)
     return null
   }
-
   return (
     <div id="cart-list-container">
-      <input type="button" id="exit-button" value="Thoát" onClick={() => { window.location.href = '/catalogue' }} />
+      <div id="cart-list-title">Giỏ hàng của tôi</div>
       <div id="list-header">
-        <div className="header1">Đơn giá</div>
-        <div className="header">Số lượng</div>
-        <div className="header">Thành tiền</div>
-        <div className="header">Xóa</div>
+        <div className="header1">Sản phẩm</div>
+        <div className="header2">Giá</div>
+        <div className="header3">Số lượng</div>
+        <div className="header4">Thành tiền</div>
       </div>
+      <div className="hr" />
       <div id="product-list-container">
         {renderItemList()}
       </div>
       <div id="controler">
         <div id="totalprice">
           <span>Tổng cộng: </span>
-          {totalPrice}
-          <span> đồng</span>
+          <span id="total-price">
+            {totalPrice}
+            <span> đồng</span>
+          </span>
         </div>
-        <input type="submit" id="buy-button" value="Mua hàng" />
+        <div className="hr" />
+        <a href="/catalogue" className="btn" id="buy-button">Tiếp tục mua sắm</a>
+        <a href="/payment" className="btn" id="continue-shopping-button">Thanh toán</a>
       </div>
     </div>
   )

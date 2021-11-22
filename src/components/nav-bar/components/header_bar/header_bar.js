@@ -5,6 +5,7 @@ import MenuBar from '../menu_bar/menu_bar'
 import Logo from './assets/logo.jpg'
 import GuestButtons from '../guest/guest'
 import MemberButtons from '../member/member'
+import Popup from '../pop-up/popup'
 
 export default function HeaderBar() {
   const userbutton = () => {
@@ -15,6 +16,7 @@ export default function HeaderBar() {
   }
   return (
     <div id="header_bar">
+      <Popup />
       <div id="logo">
         <img src={Logo} alt="logo" />
       </div>

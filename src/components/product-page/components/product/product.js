@@ -3,7 +3,7 @@ import React from 'react'
 import Controller from '../controls/controls'
 import './product.css'
 
-export default function Product({ props }) {
+export default function Product({ props, notify }) {
   const price = Number(props.cost)
   return (
     <div id="product-image-and-description">
@@ -23,7 +23,7 @@ export default function Product({ props }) {
             {props.description}
           </div>
         </div>
-        <Controller props={props} />
+        <Controller props={props} notify={notify} />
       </div>
     </div>
   )
