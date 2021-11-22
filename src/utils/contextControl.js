@@ -17,7 +17,6 @@ export const AppProvider = (props) => {
     try {
       const response = await axios.get('http://localhost:3000/product')
       setProductList(response.data)
-      setFilterProducts(response.data)
     } catch (err) {
       // eslint-disable-next-line no-console
       console.log(err)

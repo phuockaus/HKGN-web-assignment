@@ -10,4 +10,5 @@ export default function logout() {
   Cookies.remove('address')
   Cookies.remove('coupon')
   Cookies.remove('role')
+  Cookies.remove('cart')
 }

@@ -6,7 +6,7 @@ import Product from '../product/product'
 import { AppContext } from '../../../../utils/contextControl'
 import './main.css'
 
-export default function Main({ productId }) {
+export default function Main({ productId, notify }) {
   const { productList } = useContext(AppContext)
   const getProduct = (prodList, prodId) => {
     if (prodList) return prodList.filter((prod) => parseInt(prod.product_ID, 10) === parseInt(prodId, 10))
@@ -20,7 +20,7 @@ export default function Main({ productId }) {
   }
 
   const showproduct = (prod) => {
-    if (prod) return <Product props={product[0]} />
+    if (prod) return <Product props={product[0]} notify={notify} />
     return null
   }
 

@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react'
+import Cookies from 'js-cookie'
 import ProductInCart from '../product-in-cart/product-in-cart'
 import { AppContext } from '../../../../utils/contextControl'
 import './cart.css'
+import { decreaseAmount, increaseAmount, removeItemFromCart } from '../../../../utils/cart'
 
 export default function CartItems() {
-  const {
-    cart, addItemToCart, removeItemFromCart, productList
-  } = useContext(AppContext)
+  const { productList } = useContext(AppContext)
+  const cart = JSON.parse(Cookies.get('cart'))
   const [totalPrice, setTotalPrice] = useState(0)
   const [itemList, setItemList] = useState([])
 
@@ -56,10 +57,7 @@ export default function CartItems() {
         break
       }
     }
-    addItemToCart({
-      productID: id,
-      quantity: -1
-    })
+    decreaseAmount(id, 1)
     getTotalPrice()
   }
 
@@ -72,10 +70,7 @@ export default function CartItems() {
         break
       }
     }
-    addItemToCart({
-      productID: id,
-      quantity: 1
-    })
+    increaseAmount(id, 1)
     getTotalPrice()
   }
 
@@ -94,7 +89,6 @@ export default function CartItems() {
     if (itemList) return itemList.map((item) => <ProductInCart props={item} increase={increase} decrease={decrease} remove={removeItem} />)
     return null
   }
-
   return (
     <div id="cart-list-container">
       <div id="list-header">

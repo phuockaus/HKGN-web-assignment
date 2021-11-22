@@ -1,22 +1,59 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { addItemToCart } from '../../../../utils/cart'
 import './controls.css'
-import QuantityControl from '../quantity-control/quantity-control'
 
-export default function controlButtons({ props }) {
-  const stock = Number(props.stock)
+export default function controlButtons({ props, notify }) {
+  const stock = parseInt(props.stock, 10)
+  const [amount, setAmount] = useState(0)
+
+  const add = () => {
+    const q = parseInt(amount, 10)
+    if (q === 0) {
+      notify('Vui lòng chọn số lượng cần mua!')
+      return
+    }
+    if (q > stock) {
+      notify('Số lượng còn lại không đủ!')
+      return
+    }
+    const duplicate = addItemToCart({
+      productID: props.product_ID,
+      quantity: q
+    })
+    if (duplicate) notify('Sản phẩm đã tồn tại trong giỏ hàng!')
+    else notify('Sản phẩm đã được thêm vào giỏ hàng!')
+  }
+
   return (
     <div>
       <form>
         <div id="amount-control">
           <span>Số lượng </span>
-          <QuantityControl props={props.stock} />
+          <form id="quantity-control">
+            <input
+              id="quantity"
+              type="number"
+              min="1"
+              max={stock}
+              value={amount}
+              onChange={(e) => {
+                setAmount(e.target.value)
+              }}
+            />
+          </form>
           <span>
             {`(${stock} sản phẩm còn lại)`}
           </span>
         </div>
         <div id="buttons-container">
-          <div className="btn" id="btn_add_cart">Thêm vào giỏ hàng</div>
-          <div className="btn" id="btn_view_cart">Xem giỏ hàng</div>
+          <input
+            type="button"
+            className="btn"
+            id="btn_add_cart"
+            value="Thêm vào giỏ hàng"
+            onClick={add}
+          />
+          <a href="/cart" className="btn" id="btn_view_cart">Xem giỏ hàng</a>
         </div>
       </form>
     </div>

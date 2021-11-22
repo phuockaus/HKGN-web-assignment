@@ -18,6 +18,7 @@ export default function login(details, callback) {
           Cookies.set('address', encode(String(data[0].address)), { expires: 3 })
           Cookies.set('coupon', encode(String(data[0].coupon)), { expires: 3 })
           Cookies.set('role', encode(String(data[0].role)), { expires: 3 })
+          Cookies.set('cart', JSON.stringify([]), { expires: 3 })
         }
       }
     })
