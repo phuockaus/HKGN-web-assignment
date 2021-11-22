@@ -1,0 +1,68 @@
+#exit-button {
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 10%;
+  display: flex;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background: var(--button_grey);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#product-list-container {
+  justify-content: center;
+}
+
+#list-header {
+  margin-left: 5%;
+  margin-top: 2%;
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--light_blue);
+}
+
+.header1 {
+  margin-left: 40%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 15%;
+  font-size: 20px;
+  font-weight: bold;
+}
+.header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 15%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#controler {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+#totalprice {
+  width: 22%;
+  margin-right: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#buy-button {
+  height: 90%;
+}
