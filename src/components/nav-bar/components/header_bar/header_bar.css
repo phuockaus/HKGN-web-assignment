@@ -1,9 +1,3 @@
-.blank {
-  color: var(--darker_gray);
-  float: left;
-  width: 20px;
-}
-
 .buttons-bar {
   float: left;
   color: var(--darker_gray);
@@ -16,6 +10,11 @@
   transition: all 0.1s;
 }
 
+.blank {
+  color: var(--darker_gray);
+  float: left;
+  width: 20px;
+}
 #header_bar {
   width: 100%;
   height: 80px;
@@ -23,33 +22,22 @@
   position: fixed;
 }
 
-#header_bar #logo {
+#logo {
   width: 50px;
   height: 50px;
   margin: auto;
   margin-top: 5px;
 }
 
-#header_bar #logo img {
+#logo img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
 }
 
-#header_bar #navbar-buttons {
+#header-user-button {
   position: absolute;
   width: auto;
   top: 0;
-  right: 10%;
-}
-
-#header_bar #navbar-buttons #cart-button {
-  width: 40px;
-  height: 40px;
-  margin: auto;
-}
-
-#header_bar #navbar-buttons #cart-button #cart-icon {
-  width: 40px;
-  height: 40px;
+  right: 5%;
 }
