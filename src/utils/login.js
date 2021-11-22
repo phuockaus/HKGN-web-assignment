@@ -19,7 +19,7 @@ export default function login(details, callback) {
           Cookies.set('coupon', encode(String(data[0].coupon)), { expires: 3 })
           Cookies.set('role', encode(String(data[0].role)), { expires: 3 })
           Cookies.set('password', encode(String(data[0].password)), { expires: 3 })
-        } 
+        }
       }
     })
     .catch((err) => {
