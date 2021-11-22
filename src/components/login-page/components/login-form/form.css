@@ -11,21 +11,24 @@
 }
 
 #FormHeader {
+  margin-top: 10px;
+  font-weight: 600;
   color: #3b414b;
-  font-size: 35px;
+  font-size: 28px;
   text-align: center;
 }
 
 #LoginButton {
   display: flex;
   justify-content: center;
-  height: 60px;
+  height: 50px;
 }
 #SignUp {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 50px;
+  font-size: 14px;
 }
 #SignUp a {
   display: block;
@@ -61,7 +64,7 @@ input[type='password'] {
 }
 
 input[type='submit'] {
-  background-color: var(--darker_gray);
+  background-color: var(--dark_blue);
   border: none;
   color: white;
   padding: 16px 32px;
@@ -69,9 +72,22 @@ input[type='submit'] {
   cursor: pointer;
   border-radius: 5px;
   font-weight: bold;
+  font-size: 14px;
 }
-
+input[type='submit']:hover {
+  background-color: var(--light_blue);
+  transition: all 0.25s;
+  color: black;
+}
 .textContainer {
   display: flex;
   justify-content: center;
+}
+#login-error {
+  margin-top: 20px;
+  height: 12px;
+  color: red;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
 }

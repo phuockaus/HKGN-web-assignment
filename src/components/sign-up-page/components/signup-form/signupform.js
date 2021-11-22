@@ -6,14 +6,15 @@ export default function Signupform() {
   const [details, setDetails] = useState({
     phone: '', email: '', pass: '', re_pass: '', fname: '', lname: '', address: ''
   })
+  const [error, setError] = useState()
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    document.getElementById('signup-error').innerHTML = submit(details)
+    setError(submit(details))
   }
 
   const handleFocus = () => {
-    document.getElementById('signup-error').innerHTML = ''
+    setError('')
   }
 
   return (
@@ -85,9 +86,9 @@ export default function Signupform() {
           onChange={(event) => setDetails({ ...details, address: event.target.value })}
           onFocus={handleFocus}
         />
-        <input className="button" id="sign-up-button" type="submit" value="Đăng ký" />
+        <input className="btn" id="sign-up-button" type="submit" value="Đăng ký" />
       </form>
-      <div id="signup-error" />
+      <div id="signup-error">{error}</div>
     </div>
   )
 }

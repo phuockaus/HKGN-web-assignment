@@ -6,32 +6,22 @@ import './product.css'
 export default function Product({ props }) {
   const price = Number(props.cost)
   return (
-    <div id="product-container">
-      <div id="img-container">
-        <div id="product-name">{props.name}</div>
-        <div id="product-img-container">
-          <img src={props.image_link} alt="product" id="product-img" />
-        </div>
+    <div id="product-image-and-description">
+      <div id="product-img-container">
+        <img src={props.image_link} alt="product" id="product-img" />
       </div>
       <div id="description-container">
+        <div id="product-name">{props.name}</div>
         <div id="price">
           <span>Giá: </span>
           {price}
           <span> đồng</span>
         </div>
         <div id="description">
-          <h4>Mô tả sản phẩm:</h4>
-          <p className="description">
+          <div id="title-info">Mô tả sản phẩm</div>
+          <div id="description-text">
             {props.description}
-            Parapen để mô tả sản phẩm giờ
-            truyền vào như thế nào ai biết
-            làm sao ai biết làm sao như thế
-            nào là làm sao
-            Parapen để mô tả sản phẩm giờ
-            truyền vào như thế nào ai biết
-            làm sao ai biết làm sao như thế
-            nào là làm sao
-          </p>
+          </div>
         </div>
         <Controller props={props} />
       </div>
