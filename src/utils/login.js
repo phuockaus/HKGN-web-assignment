@@ -19,6 +19,7 @@ export default function login(details) {
           Cookies.set('address', encode(String(data[0].address)), { expires: 3 })
           Cookies.set('coupon', encode(String(data[0].coupon)), { expires: 3 })
           Cookies.set('role', encode(String(data[0].role)), { expires: 3 })
+          Cookies.set('password', encode(String(data[0].password)), { expires: 3 })
         } else {
           // eslint-disable-next-line no-alert
           window.alert('Wrong password')
@@ -28,8 +29,8 @@ export default function login(details) {
         window.alert('Cannot find your account')
       }
     })
-    // eslint-disable-next-line no-console
     .catch((err) => {
+      // eslint-disable-next-line no-console
       console.log(err)
     })
 }
