@@ -17,7 +17,7 @@ export default function ProductInfo(props) {
         document.getElementById('product-pop-up-container').style.animationDuration = 'none'
         document.getElementById('product-pop-up-container').style.display = 'none'
       }, 200)
-    }, 1000)
+    }, 2000)
   }
   const notify = (mes) => {
     setMessage(mes)

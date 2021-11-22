@@ -35,6 +35,7 @@ export default function CartItems() {
         lst.push({
           id: cart[i].productID,
           image: product.image_link,
+          description: product.description,
           name: product.name,
           quantity: parseInt(cart[i].quantity, 10),
           cost: parseInt(product.cost, 10),
@@ -91,22 +92,28 @@ export default function CartItems() {
   }
   return (
     <div id="cart-list-container">
+      <div id="cart-list-title">Giỏ hàng của tôi</div>
       <div id="list-header">
-        <div className="header1">Đơn giá</div>
-        <div className="header">Số lượng</div>
-        <div className="header">Thành tiền</div>
-        <div className="header">Xóa</div>
+        <div className="header1">Sản phẩm</div>
+        <div className="header2">Giá</div>
+        <div className="header3">Số lượng</div>
+        <div className="header4">Thành tiền</div>
       </div>
+      <div className="hr" />
       <div id="product-list-container">
         {renderItemList()}
       </div>
       <div id="controler">
         <div id="totalprice">
           <span>Tổng cộng: </span>
-          {totalPrice}
-          <span> đồng</span>
+          <span id="total-price">
+            {totalPrice}
+            <span> đồng</span>
+          </span>
         </div>
-        <a href="/payment" className="btn" id="buy-button">Mua hàng</a>
+        <div className="hr" />
+        <a href="/catalogue" className="btn" id="buy-button">Tiếp tục mua sắm</a>
+        <a href="/payment" className="btn" id="continue-shopping-button">Thanh toán</a>
       </div>
     </div>
   )

@@ -10,7 +10,19 @@ export default function ProductInCart({
       <div id="product-img-in-cart-container">
         <img src={props.image} alt="product" id="product-in-cart-img" />
       </div>
-      <div id="product-in-cart-name">{props.name}</div>
+      <div id="product-description-name-cart">
+        <div id="product-in-cart-name">{props.name}</div>
+        <div id="product-description">{props.description}</div>
+        <div id="in-cart-removeItem">
+          <input
+            id="removeButton"
+            className="btn"
+            type="button"
+            value="Xóa"
+            onClick={() => remove(props.id)}
+          />
+        </div>
+      </div>
       <div id="in-cart-price">
         <div>
           {props.cost}
@@ -25,7 +37,7 @@ export default function ProductInCart({
           value="-"
           onClick={() => decrease(props.id)}
         />
-        {props.quantity}
+        <span id="in-cart-amount">{props.quantity}</span>
         <input
           id="increase-btn"
           className="quantity-btn"
@@ -39,15 +51,6 @@ export default function ProductInCart({
           {props.total}
           <span> đồng</span>
         </div>
-      </div>
-      <div id="in-cart-removeItem">
-        <input
-          id="removeButton"
-          className="remove-button"
-          type="button"
-          value="Xóa"
-          onClick={() => remove(props.id)}
-        />
       </div>
     </div>
   )

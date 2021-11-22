@@ -1,3 +1,4 @@
+import Cookies from 'js-cookie'
 import React, { useState } from 'react'
 import { addItemToCart } from '../../../../utils/cart'
 import './controls.css'
@@ -8,6 +9,10 @@ export default function controlButtons({ props, notify }) {
 
   const add = () => {
     const q = parseInt(amount, 10)
+    if (!Cookies.get('accountID')) {
+      notify('Vui lòng đăng nhập để thêm vào giỏ hàng!')
+      return
+    }
     if (q === 0) {
       notify('Vui lòng chọn số lượng cần mua!')
       return

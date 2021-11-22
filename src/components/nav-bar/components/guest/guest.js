@@ -18,7 +18,7 @@ export default function GuestButtons() {
         document.getElementById('nav-pop-up-container').style.animationDuration = 'none'
         document.getElementById('nav-pop-up-container').style.display = 'none'
       }, 200)
-    }, 1000)
+    }, 2000)
   }
   return (
     <div id="guest-buttons">
