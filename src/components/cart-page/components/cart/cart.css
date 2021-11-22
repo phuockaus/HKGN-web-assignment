@@ -52,6 +52,7 @@
 #total-price {
   float: right;
   color: var(--dark_blue);
+  margin-right: 1%;
 }
 #buy-button {
   width: 20%;
