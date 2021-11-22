@@ -32,9 +32,15 @@ export const AppProvider = (props) => {
     // item is in form of a JSON object same as ele in cart
     const processingCart = cart
     let checkDuplicate = false
+    let ele
     for (ele of processingCart) {
       if (ele.productID === item.productID) {
-        ele.quantity += item.quantity
+        let tempQuantity = Number(ele.quantity)
+        tempQuantity += Number(item.quantity)
+        ele.quantity = tempQuantity
+        if (ele.quantity < 1) {
+          ele.quantity = 1
+        }
         checkDuplicate = true
         break
       }
@@ -47,6 +53,7 @@ export const AppProvider = (props) => {
 
   const removeItemFromCart = (productID) => {
     const processingCart = cart
+    let ele
     for (ele of processingCart) {
       if (ele.productID === productID) {
         const index = processingCart.indexOf(ele)

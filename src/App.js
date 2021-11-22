@@ -9,6 +9,8 @@ import Homepage from './components/main-page'
 import Signup from './components/sign-up-page'
 import ProductInfo from './components/product-page'
 import Catalogue from './components/product-catalogue'
+import Cart from './components/cart-page'
+import PaymentInfo from './components/payment-page'
 import AccountInfo from './components/account-info'
 
 function App() {
@@ -31,6 +33,12 @@ function App() {
           <Route path="/product/:id" component={ProductInfo} />
           <Route path="/catalogue">
             <Catalogue />
+          </Route>
+          <Route path="/cart">
+            <Cart />
+          </Route>
+          <Route path="/payment">
+            <PaymentInfo />
           </Route>
           <Route path="/account-info">
             <AccountInfo />
