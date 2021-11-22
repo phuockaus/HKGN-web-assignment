@@ -11,8 +11,7 @@ const InfoFrame = () => {
     email: '',
     phoneNumber: '',
     coupon: 0,
-    address: '',
-    password: ''
+    address: ''
   })
   const [changePassBundle, setChangePassBundle] = useState({
     oldPass: '',
@@ -28,25 +27,31 @@ const InfoFrame = () => {
       email: decode(Cookies.get('email')),
       phoneNumber: decode(Cookies.get('phoneNumber')),
       coupon: parseInt(decode(Cookies.get('coupon')), 10),
-      address: decode(Cookies.get('address')),
-      password: decode(Cookies.get('password'))
+      address: decode(Cookies.get('address'))
+      // password: decode(Cookies.get('password'))
     })
   }, [])
 
   const showModal = () => {
     setNotification('')
     document.querySelector('.modal-container').style.display = 'flex'
+    document.querySelector('.modal-container').style.animationName = 'fadeIn'
+    document.querySelector('.modal-container').style.animationDuration = '0.3s'
     document.querySelector('#old-pass').value = ''
     document.querySelector('#new-pass').value = ''
     document.querySelector('#confirm-pass').value = ''
   }
 
   const hideModal = () => {
+    document.querySelector('.modal-container').style.animationName = 'fadeOut'
+    document.querySelector('.modal-container').style.animationDuration = '0.3s'
     document.querySelector('.modal-container').style.display = 'none'
   }
 
   const showNotifySuccess = () => {
     document.querySelector('#notify-success').style.display = 'flex'
+    document.querySelector('#notify-success').style.animationName = 'fadeIn'
+    document.querySelector('#notify-success').style.animationDuration = '0.3s'
   }
 
   const hideNotifySuccess = () => {
@@ -55,6 +60,8 @@ const InfoFrame = () => {
 
   const showNotifyError = () => {
     document.querySelector('#notify-error').style.display = 'flex'
+    document.querySelector('#notify-error').style.animationName = 'fadeIn'
+    document.querySelector('#notify-error').style.animationDuration = '0.3s'
   }
 
   const hideNotifyError = () => {
@@ -62,16 +69,20 @@ const InfoFrame = () => {
   }
 
   const sendDataToUpdateInfo = () => {
-    updateAccount(infoBundle, showNotifySuccess, showNotifyError)
+    const valueToUpdate = infoBundle
+    valueToUpdate.password = decode(Cookies.get('password'))
+    updateAccount(valueToUpdate, showNotifySuccess, showNotifyError)
   }
 
   const changePasswords = () => {
-    if (changePassBundle.oldPass !== infoBundle.password) {
+    if (changePassBundle.oldPass !== decode(Cookies.get('password'))) {
       setNotification('Password cũ không đúng, vui lòng thử lại')
     } else if (changePassBundle.newPass !== changePassBundle.confirmPass) {
       setNotification('Password mới không trùng khớp')
     } else {
-      setInfoBundle({ ...infoBundle, password: changePassBundle.newPass })
+      const updateValue = infoBundle
+      updateValue.password = changePassBundle.newPass
+      console.log(updateValue)
       updateAccount(
         infoBundle,
         () => {
