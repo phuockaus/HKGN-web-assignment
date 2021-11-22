@@ -1,11 +1,7 @@
 import React from 'react'
 import './member.css'
-import {
-  FontAwesomeIcon
-} from '@fortawesome/react-fontawesome'
-import {
-  faCartPlus, faUser
-} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartPlus, faUser } from '@fortawesome/free-solid-svg-icons'
 import Cookies from 'js-cookie'
 import { decode } from 'string-encode-decode'
 import { Link } from 'react-router-dom'
@@ -25,7 +21,9 @@ export default function MemberButtons() {
           <div id="drop-down-member">
             <a href="/account-info">Thông tin tài khoản</a>
             <a href="/">Đơn hàng của tôi</a>
-            <a href="/" onClick={logout}>Đăng xuất</a>
+            <a href="/" onClick={logout}>
+              Đăng xuất
+            </a>
           </div>
         </div>
       </div>

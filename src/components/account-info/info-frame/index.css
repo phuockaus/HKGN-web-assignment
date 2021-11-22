@@ -5,9 +5,14 @@
 }
 
 #account-info-title {
-  border: 2px solid black;
   padding: 5px;
   font-size: 24px;
+}
+
+#address-form {
+  padding: 5px;
+  font-size: 24px;
+  margin-top: 10px;
 }
 
 #account-info-container {
@@ -15,47 +20,181 @@
   border: 2px solid #000000;
 }
 
-.title {
-  font-size: 20px;
-  margin-left: 10px;
+.account-info-form {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 
-.info-table {
-  margin: 10px 0px 20px 30px;
+.form-label {
+  padding-right: 20px;
+  width: 40%;
 }
 
-.prop {
-  width: 200px;
+.form-input {
+  width: 60%;
+}
+
+.info-label {
+  text-align: right;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-size: 16px;
+  color: rgba(85, 85, 85, 0.8);
+}
+
+.info-input {
+  display: block;
+  margin-bottom: 32px;
+  width: 80%;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  box-shadow: inset 0 2px 0 0 rgb(0 0 0 / 2%);
+}
+
+.info-text {
+  margin-bottom: 30px;
+}
+
+#coupon-info {
+  padding-top: 5px;
+}
+
+#change-password {
+  width: 130px;
   height: 40px;
-}
-
-.edit-btn {
-  cursor: pointer;
-  width: 100px;
-  height: 40px;
-  margin-left: 20px;
-  background-color: var(--light_blue);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 25%;
+  border: none;
   border-radius: 5px;
 }
 
-.edit-btn:hover {
-  background-color: var(--dark_blue);
+#address {
+  margin: 0px;
 }
 
-.change-pass-btn {
-  cursor: pointer;
-  width: 100px;
-  height: 40px;
-  background-color: var(--light_blue);
+#save-btn {
+  display: block;
+  min-width: 130px;
+  min-height: 40px;
+  margin-top: 30px;
+  margin-left: 50%;
+  border-radius: 5px;
+  border: none;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+  background-color: #fff;
+  width: 600px;
+  max-width: 100%;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-direction: column;
+}
+
+.password-form {
+  display: flex;
+  justify-content: center;
+}
+
+#btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+#confirm-change {
+  width: 160px;
+  height: 40px;
+  margin-right: 20px;
+  border: none;
   border-radius: 5px;
 }
 
-.change-pass-btn:hover {
-  background-color: var(--dark_blue);
+#cancel {
+  width: 160px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+}
+
+#notify-success {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#confirm {
+  width: 160px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+}
+
+.modal-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.mini-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.label {
+  width: 30%;
+  text-align: right;
+  font-size: 16px;
+  color: rgba(85, 85, 85, 0.8);
+}
+
+.pass-input {
+  width: 70%;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  box-shadow: inset 0 2px 0 0 rgb(0 0 0 / 2%);
+}
+
+#notify-container {
+  font-size: 16px;
+  color: var(--light_red);
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
 }
