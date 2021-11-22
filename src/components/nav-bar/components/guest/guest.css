@@ -1,0 +1,18 @@
+#guest-auth {
+  height: 30px;
+  line-height: 30px;
+  z-index: 20;
+  font-size: 14px;
+  text-align: center;
+}
+
+#cart-button {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+}
+
+#cart-icon {
+  width: 40px;
+  height: 40px;
+}

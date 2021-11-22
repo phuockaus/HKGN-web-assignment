@@ -1,0 +1,61 @@
+#info-frame {
+  padding-top: 100px;
+  width: 60%;
+  margin: auto;
+}
+
+#account-info-title {
+  border: 2px solid black;
+  padding: 5px;
+  font-size: 24px;
+}
+
+#account-info-container {
+  margin-top: 50px;
+  border: 2px solid #000000;
+}
+
+.title {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.info-table {
+  margin: 10px 0px 20px 30px;
+}
+
+.prop {
+  width: 200px;
+  height: 40px;
+}
+
+.edit-btn {
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  margin-left: 20px;
+  background-color: var(--light_blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.edit-btn:hover {
+  background-color: var(--dark_blue);
+}
+
+.change-pass-btn {
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  background-color: var(--light_blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.change-pass-btn:hover {
+  background-color: var(--dark_blue);
+}

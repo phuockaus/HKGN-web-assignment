@@ -10,6 +10,7 @@ import Signup from './components/sign-up-page'
 import ProductInfo from './components/product-page'
 import Catalogue from './components/product-catalogue'
 import PaymentInfo from './components/payment-page'
+import AccountInfo from './components/account-info'
 
 function App() {
   return (
@@ -34,6 +35,8 @@ function App() {
           </Route>
           <Route path="/payment">
             <PaymentInfo />
+          <Route path="/account-info">
+            <AccountInfo />
           </Route>
         </Switch>
       </Router>
