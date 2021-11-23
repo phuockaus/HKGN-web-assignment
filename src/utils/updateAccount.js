@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import axios from 'axios'
 import { encode } from 'string-encode-decode'
 import Cookies from 'js-cookie'

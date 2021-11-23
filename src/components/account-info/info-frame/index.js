@@ -82,7 +82,6 @@ const InfoFrame = () => {
     } else {
       const updateValue = infoBundle
       updateValue.password = changePassBundle.newPass
-      console.log(updateValue)
       updateAccount(
         infoBundle,
         () => {

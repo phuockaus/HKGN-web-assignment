@@ -51,6 +51,7 @@ export default function FilterSearchBar({ filter }) {
           onChange={(event) => {
             setDetails({ ...details, search_name: event.target.value })
           }}
+          checked
         />
       </div>
       <div id="filter-bar-area">
