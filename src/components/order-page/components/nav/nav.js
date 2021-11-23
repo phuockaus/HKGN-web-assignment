@@ -2,7 +2,7 @@
 import React from 'react'
 import './nav.css'
 
-export default function Nav({ setStatus }) {
+export default function Nav({ setFilter }) {
   const reset = () => {
     const btnList = document.getElementsByClassName('btn-status')
     for (let i = 0; i < btnList.length; i += 1) {
@@ -14,31 +14,31 @@ export default function Nav({ setStatus }) {
     reset()
     document.getElementById('order-page-nav-btn1').style.borderBottom = '5px solid var(--light_blue)'
     document.getElementById('order-page-nav-btn1').style.color = 'var(--dark_blue)'
-    setStatus('all')
+    setFilter('all')
   }
   const select2 = () => {
     reset()
     document.getElementById('order-page-nav-btn2').style.borderBottom = '5px solid var(--light_blue)'
     document.getElementById('order-page-nav-btn2').style.color = 'var(--dark_blue)'
-    setStatus('waiting')
+    setFilter('waiting')
   }
   const select3 = () => {
     reset()
     document.getElementById('order-page-nav-btn3').style.borderBottom = '5px solid var(--light_blue)'
     document.getElementById('order-page-nav-btn3').style.color = 'var(--dark_blue)'
-    setStatus('shipping')
+    setFilter('shipping')
   }
   const select4 = () => {
     reset()
     document.getElementById('order-page-nav-btn4').style.borderBottom = '5px solid var(--light_blue)'
     document.getElementById('order-page-nav-btn4').style.color = 'var(--dark_blue)'
-    setStatus('done')
+    setFilter('done')
   }
   const select5 = () => {
     reset()
     document.getElementById('order-page-nav-btn5').style.borderBottom = '5px solid var(--light_blue)'
     document.getElementById('order-page-nav-btn5').style.color = 'var(--dark_blue)'
-    setStatus('canceled')
+    setFilter('canceled')
   }
   return (
     <div id="order-page-nav">

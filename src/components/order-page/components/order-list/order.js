@@ -1,13 +1,14 @@
+/* eslint-disable max-len */
 /* eslint-disable react/prop-types */
 import React from 'react'
-// import { AppContext } from '../../../../utils/contextControl'
 import OrderTemplate from '../template/template'
 import './order.css'
 
-export default function OrderList({ orderList }) {
-  // const { productList } = useContext(AppContext)
+export default function OrderList({
+  orderList, setPop, setOrderID, setStatus
+}) {
   const getOrderList = () => {
-    if (orderList) return orderList.map((order) => <OrderTemplate props={order} />)
+    if (orderList) return orderList.map((order) => <OrderTemplate props={order} setPop={setPop} setOrderID={setOrderID} setStatus={setStatus} />)
     return null
   }
   return (
