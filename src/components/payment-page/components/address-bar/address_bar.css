@@ -1,7 +1,6 @@
 #address-bar-container {
   padding: 20px;
   overflow: hidden;
-  background-image: linear-gradient(var(--light_blue), white);
   border-radius: 3px;
   box-shadow: 0 0 1px gray;
 }
