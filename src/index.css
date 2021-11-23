@@ -2,9 +2,11 @@
   --dark_blue: rgb(100, 136, 255);
   --dark_red: rgb(230, 0, 0);
   --light_blue: rgb(151, 196, 255);
+  --lighter_blue: rgb(212, 231, 255);
   --light_red: rgb(255, 77, 77);
   --darker_gray: rgb(70, 70, 70);
   --dark_gray: rgb(110, 110, 110);
+  --light_gray: rgb(236, 236, 236);
   --title_gray: #3b414b;
   --white_background: #f6f7f9;
   --text_form: #748194;

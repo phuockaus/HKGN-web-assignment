@@ -12,6 +12,7 @@ import Catalogue from './components/product-catalogue'
 import Cart from './components/cart-page'
 import PaymentInfo from './components/payment-page'
 import AccountInfo from './components/account-info'
+import OrderPage from './components/order-page'
 
 function App() {
   return (
@@ -42,6 +43,9 @@ function App() {
           </Route>
           <Route path="/account-info">
             <AccountInfo />
+          </Route>
+          <Route path="/order">
+            <OrderPage />
           </Route>
         </Switch>
       </Router>

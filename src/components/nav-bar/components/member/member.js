@@ -20,7 +20,7 @@ export default function MemberButtons() {
           <div id="member-name">{name}</div>
           <div id="drop-down-member">
             <a href="/account-info">Thông tin tài khoản</a>
-            <a href="/">Đơn hàng của tôi</a>
+            <a href="/order">Đơn hàng của tôi</a>
             <a href="/" onClick={logout}>
               Đăng xuất
             </a>
