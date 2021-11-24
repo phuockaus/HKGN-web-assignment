@@ -7,7 +7,6 @@
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -27,6 +26,7 @@
 }
 #address-bar-order {
   font-size: 14px;
+  overflow: hidden;
 }
 #address-bar-order-title {
   width: 50%;
@@ -43,30 +43,20 @@
 #address-bar-order-status {
   color: var(--dark_blue);
 }
-#payment-pop-up-btn {
-  width: 40%;
-  margin: 10px auto;
-  height: 30px;
+#detail-order-list-item {
+  display: none;
+  overflow: hidden;
+  margin-top: 10px;
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
 }
-#submit-note-payment-btn1 {
-  display: block;
-  width: 45%;
-  height: 30px;
-  float: left;
-  text-decoration: none;
-  line-height: 30px;
+#close-detail-btn-area {
+  text-align: right;
+  width: 100%;
 }
-#submit-note-payment-btn2 {
-  display: block;
-  width: 45%;
-  height: 30px;
-  float: right;
+#close-detail-btn {
+  margin: auto;
   border: none;
-  padding: 6px 12px;
-  background-color: var(--dark_gray);
-}
-#submit-note-payment-btn2:hover {
-  color: black;
-  background-color: var(--white_background);
-  transition: all 0.3s;
+  padding: 12px 18px;
+  width: 20%;
 }

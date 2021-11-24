@@ -2,22 +2,24 @@
 import React from 'react'
 import './detail.css'
 
-export default function OrderDetail({ props }) {
+export default function OrderDetail({ prop }) {
   return (
-    <div id="order-pop-up-container">
-      <div id="popup-template-order-image">
-        <img src={props.image} alt="logo" />
+    <div id="detail-pop-up-container">
+      <div id="detail-template-order-image">
+        <img src={prop.image} alt="logo" />
       </div>
-      <div id="popup-template-order-name">
-        {props.name}
+      <div id="detail-template-order-name">
+        {prop.name}
       </div>
-      <div id="popup-template-order-cost">
-        {props.cost}
+      <div id="detail-template-order-cost">
+        {prop.cost}
         {' '}
         đồng
       </div>
-      <div id="popup-template-order-quantity">
-        {props.quantity}
+      <div id="detail-template-order-quantity">
+        Số lượng:
+        {' '}
+        {prop.quantity}
       </div>
     </div>
   )
