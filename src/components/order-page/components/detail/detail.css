@@ -1,10 +1,12 @@
 #detail-pop-up-container {
   overflow: hidden;
+  display: block;
   width: 100%;
   padding: 2px 2px;
   height: 90px;
   margin-top: 10px;
   line-height: 90px;
+  color: var(--darker-gray);
 }
 #detail-template-order-image {
   text-align: center;

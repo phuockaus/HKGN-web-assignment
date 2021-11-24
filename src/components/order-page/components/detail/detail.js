@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './detail.css'
 
 export default function OrderDetail({ prop }) {
+  const path = `/product/${prop.id}`
   return (
-    <div id="detail-pop-up-container">
+    <Link to={path} id="detail-pop-up-container">
       <div id="detail-template-order-image">
         <img src={prop.image} alt="logo" />
       </div>
@@ -21,6 +23,6 @@ export default function OrderDetail({ prop }) {
         {' '}
         {prop.quantity}
       </div>
-    </div>
+    </Link>
   )
 }

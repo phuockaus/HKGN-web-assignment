@@ -79,6 +79,7 @@ export default function Main() {
       for (let i = 0; i < products.length; i += 1) {
         const product = getProductInfo(products[i].product_ID)
         lst.push({
+          id: products[i].product_ID,
           image: product.image_link,
           name: product.name,
           quantity: parseInt(products[i].quantity, 10),
