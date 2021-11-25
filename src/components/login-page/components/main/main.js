@@ -5,9 +5,7 @@ import Form from '../login-form/form'
 
 export default function Main() {
   if (Cookies.get('accountID')) {
-    return (
-      <Redirect to="/home" />
-    )
+    return <Redirect to="/home" />
   }
   return (
     <div>

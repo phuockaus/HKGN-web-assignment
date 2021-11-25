@@ -1,5 +1,5 @@
 :root {
-  --dark_blue: rgb(100, 136, 255);
+  --dark_blue: #6488ff;
   --dark_red: rgb(230, 0, 0);
   --light_blue: rgb(151, 196, 255);
   --lighter_blue: rgb(212, 231, 255);
@@ -26,6 +26,18 @@ body {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--dark_blue);
 }
 
 code {

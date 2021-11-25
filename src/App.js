@@ -13,6 +13,7 @@ import Cart from './components/cart-page'
 import PaymentInfo from './components/payment-page'
 import AccountInfo from './components/account-info'
 import OrderPage from './components/order-page'
+import AdminPage from './components/admin-page'
 
 function App() {
   return (
@@ -46,6 +47,9 @@ function App() {
           </Route>
           <Route path="/order">
             <OrderPage />
+          </Route>
+          <Route path="/">
+            <AdminPage />
           </Route>
         </Switch>
       </Router>
