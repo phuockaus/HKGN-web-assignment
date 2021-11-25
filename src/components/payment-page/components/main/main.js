@@ -1,13 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Cookies from 'js-cookie'
-import { decode } from 'string-encode-decode'
+import { decode, encode } from 'string-encode-decode'
 import { AppContext } from '../../../../utils/contextControl'
 import AddressBar from '../address-bar/address_bar'
 import SubmitPayment from '../order-submit/submit'
 import ProductInCartList from '../product-list/product_list'
 import './main.css'
 import Popup from '../pop-up/popup'
-// import addOrder from '../../../../utils/addOrder'
+import addOrder from '../../../../utils/addOrder'
+import SuccessPopUp from '../success-pop-up/success'
 
 export default function Main() {
   const cart = JSON.parse(Cookies.get('cart'))
@@ -79,8 +80,10 @@ export default function Main() {
         quantity: parseInt(cart[i].quantity, 10)
       })
     }
-    window.alert(`${cusID} ${address} ${cou} ${finalCost}`)
-    window.alert(lst)
+    addOrder(cusID, address, cou, finalCost, lst)
+    Cookies.set('cart', JSON.stringify([]), { expires: 3 })
+    Cookies.set('coupon', encode(String(cou)), { expires: 3 })
+    document.getElementById('success-pop-up-container').style.display = 'block'
   }
 
   const pay = () => {
@@ -94,6 +97,7 @@ export default function Main() {
   return (
     <div id="payment-page-container">
       <Popup message={message} submit={submit} />
+      <SuccessPopUp message="Thanh toán thành công!" />
       <div id="payment-page-title">Thanh toán</div>
       <div id="payment-page-addressbar">
         <AddressBar />
