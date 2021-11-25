@@ -1,0 +1,34 @@
+#order-list-container {
+  height: 50px;
+  line-height: 50px;
+}
+#order-list-title {
+  padding-bottom: 10px;
+  box-shadow: 0 0 2px gray;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.orlt {
+  float: left;
+  font-weight: 600;
+  color: var(--dark_gray);
+  margin-right: 1%;
+}
+#orl-title1 {
+  width: 15%;
+  margin-left: 1%;
+}
+#orl-title2 {
+  width: 20%;
+}
+#orl-title3 {
+  width: 15%;
+}
+#orl-title4 {
+  width: 15%;
+  text-align: right;
+}
+#orl-title5 {
+  width: 25%;
+  text-align: right;
+}
