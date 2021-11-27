@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import './hot_news.css'
+import ReactHtmlParser from 'react-html-parser'
 import { Link } from 'react-router-dom'
 
 export default function NewsTemplate({ prop }) {
@@ -20,7 +21,7 @@ export default function NewsTemplate({ prop }) {
           </Link>
         </div>
         <div id="hotnews-template-content">
-          {shortContent}
+          {ReactHtmlParser(shortContent)}
         </div>
       </div>
     </div>

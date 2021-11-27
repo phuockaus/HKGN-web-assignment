@@ -7,11 +7,11 @@ export default function NewsItem({ data, setDataInPop, setShowPop }) {
     setDataInPop(data)
     setShowPop(true)
   }
-
+  const shortTitle = data.title.length > 50 ? `${data.title.substring(0, 50)}...` : data.title
   return (
     <button type="button" className="news-card" key={data.newsID} onClick={handleOnClick}>
       <div className="content">{data.news_ID}</div>
-      <div className="content">{data.title}</div>
+      <div className="content">{shortTitle}</div>
       <div className="content image">
         <img src={data.image_link} alt={data.image_link} className="mini-img" />
       </div>
