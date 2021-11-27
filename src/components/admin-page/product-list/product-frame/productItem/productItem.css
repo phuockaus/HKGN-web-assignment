@@ -1,0 +1,40 @@
+.product-card {
+  height: 80px;
+  border: none;
+  margin: 1px 0;
+  background-color: var(--white_background);
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 80px;
+  font-size: 14px;
+  width: 100%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.product-card:hover {
+  transition: all 0.2s;
+  background-color: var(--light_gray);
+}
+
+.content {
+  width: 16.66%;
+  font-weight: bold;
+}
+
+.product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-cost,
+.product-stock {
+  color: var(--dark_blue);
+}
+
+.mini-img {
+  width: 60px;
+  height: 60px;
+}
