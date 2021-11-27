@@ -16,11 +16,9 @@
   border-radius: 3px;
 }
 #news-list {
+  width: 75%;
   margin: auto;
-  margin-left: 3%;
 }
 #hot-news {
   margin: auto;
-  display: flex;
-  justify-content: space-between;
 }

@@ -12,7 +12,7 @@ export default function Main() {
     if (newsList) {
       const lst = []
       for (let i = 0; i < newsList.length; i += 1) {
-        if (newsList[i].position !== '0' && newsList[i].position !== '1') {
+        if (newsList[i].position !== '1') {
           lst.push({
             news_ID: newsList[i].news_ID,
             title: newsList[i].title,
