@@ -9,7 +9,7 @@ export default function NewsItem({
     setDataInPop(data)
     setShowPop(true)
   }
-  const shortTitle = data.title.length > 50 ? `${data.title.substring(0, 50)}...` : data.title
+  const shortTitle = data.title.length > 50 ? `${data.title.substring(0, 40)}...` : data.title
 
   const handleOnDelete = () => {
     openDeletePopup(data.news_ID)

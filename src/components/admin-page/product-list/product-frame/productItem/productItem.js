@@ -13,7 +13,7 @@ export default function ProductItem({
   const handleOnDelete = () => {
     openDeletePopup(data.product_ID)
   }
-
+  const shortName = data.name.length > 25 ? `${data.name.substring(0, 25)}...` : data.name
   return (
     <button
       type="button"
@@ -22,7 +22,7 @@ export default function ProductItem({
       onClick={() => handleOnClick()}
     >
       <div className="product-code content">{data.product_ID}</div>
-      <div className="product-name content">{data.name}</div>
+      <div className="product-name content">{shortName}</div>
       <div className="product-image content">
         <img src={data.image_link} alt={data.product_ID} className="mini-img" />
       </div>
