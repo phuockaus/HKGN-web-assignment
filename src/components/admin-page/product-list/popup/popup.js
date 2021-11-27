@@ -11,7 +11,7 @@ export default function Popup({
   const [productID, setProductID] = useState()
   const [image, setImage] = useState(null)
   const [cost, setCost] = useState()
-  const [category, setCategory] = useState('')
+  const [category, setCategory] = useState()
   const [stock, setStock] = useState()
   const [description, setDescription] = useState('')
 
@@ -21,7 +21,7 @@ export default function Popup({
       setProductName('')
       setImage('')
       setCost(0)
-      setCategory('')
+      setCategory('caphebot')
       setDescription('')
       setStock(0)
     } else if (data) {
@@ -110,13 +110,17 @@ export default function Popup({
               onChange={(event) => setImage(event.target.value)}
             />
             <div className="label">Phân loại</div>
-            <input
+            <select
               type="text"
               className="input"
-              placeholder="cà phê hòa tan, cà phê bột, dụng cụ pha"
               value={category}
               onChange={(event) => setCategory(event.target.value)}
-            />
+            >
+              <option value="caphebot">Cà phê bột</option>
+              <option value="caphehoatan">Cà phê hòa tan</option>
+              <option value="dungcucaphe">Dụng cụ cà phê</option>
+              <option value="mayphacaphe">Máy pha cà phê</option>
+            </select>
           </div>
           <div className="form-row-last">
             <div className="label">Số lượng trong kho</div>
