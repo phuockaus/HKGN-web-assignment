@@ -33,17 +33,13 @@ export default function Main({ newsID }) {
   return (
     <div id="newsDetail-container">
       <div id="newsDetail-header">Tin tức</div>
-      <div id="newsDetail-title">
-        {tempNews.title}
-      </div>
+      <div id="newsDetail-title">{tempNews.title}</div>
       <div id="temp">
         <div id="newsDetail-image-container">
           <img src={tempNews.image_link} alt="news" id="newsDetail-image" />
         </div>
         <div id="newsDetail-content-container">
-          <div id="newsDetail-content">
-            {ReactHtmlParser(tempNews.content)}
-          </div>
+          <div id="newsDetail-content">{ReactHtmlParser(tempNews.content)}</div>
         </div>
       </div>
     </div>

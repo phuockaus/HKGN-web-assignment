@@ -3,11 +3,18 @@ import React from 'react'
 import ProductItem from './productItem/productItem'
 import './productFrame.css'
 
-export default function ProductFrame({ productList, setDataInPop, setShowPop }) {
+export default function ProductFrame({
+  productList, setDataInPop, setShowPop, openDeletePopup
+}) {
   const renderProductList = () => {
     if (productList) {
       return productList.map((product) => (
-        <ProductItem data={product} setDataInPop={setDataInPop} setShowPop={setShowPop} />
+        <ProductItem
+          data={product}
+          setDataInPop={setDataInPop}
+          setShowPop={setShowPop}
+          openDeletePopup={openDeletePopup}
+        />
       ))
     }
     return null
@@ -22,6 +29,7 @@ export default function ProductFrame({ productList, setDataInPop, setShowPop }) 
         <div className="title">Giá tiền</div>
         <div className="title">Phân loại</div>
         <div className="title">Hàng trong kho</div>
+        <div className="title" />
       </div>
       <div id="product-frame-content">{renderProductList()}</div>
     </div>

@@ -6,9 +6,10 @@ import Popup from './popup/popup'
 
 export default function ProductList() {
   const [productList, setProductList] = useState(null)
-  const [showPop, setShowPop] = useState(false)
+  const [showPopProduct, setShowPop] = useState(false)
   const [dataInPop, setDataInPop] = useState(null)
   const [isCreating, setIsCreating] = useState(false)
+  const [isDeleting, setIsDeleting] = useState(false)
 
   useEffect(() => {
     getProduct().then((productLst) => {
@@ -20,10 +21,10 @@ export default function ProductList() {
     getProduct().then((productLst) => {
       setProductList(productLst)
     })
-  }, [showPop])
+  }, [showPopProduct])
 
   const changePopupState = () => {
-    if (showPop) {
+    if (showPopProduct) {
       document.getElementById('popup-container').style.display = 'block'
     } else {
       document.getElementById('popup-container').style.display = 'none'
@@ -33,6 +34,7 @@ export default function ProductList() {
   const close = () => {
     setShowPop(false)
     setIsCreating(false)
+    setIsDeleting(false)
     setDataInPop(null)
   }
 
@@ -41,9 +43,15 @@ export default function ProductList() {
     setShowPop(true)
   }
 
+  const openDeletePopup = (id) => {
+    setDataInPop(id)
+    setIsDeleting(true)
+    setShowPop(true)
+  }
+
   useEffect(() => {
     changePopupState()
-  }, [showPop])
+  }, [showPopProduct])
 
   return (
     <div className="container">
@@ -53,9 +61,16 @@ export default function ProductList() {
           productList={productList}
           setDataInPop={setDataInPop}
           setShowPop={setShowPop}
+          openDeletePopup={openDeletePopup}
         />
       </div>
-      <Popup data={dataInPop} close={close} showPop={showPop} isCreating={isCreating} />
+      <Popup
+        data={dataInPop}
+        close={close}
+        showPop={showPopProduct}
+        isCreating={isCreating}
+        isDeleting={isDeleting}
+      />
       <button onClick={() => openCreatePopup()} type="button" id="add-btn">
         +
       </button>

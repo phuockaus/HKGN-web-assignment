@@ -2,10 +2,16 @@
 import React from 'react'
 import './newsItem.css'
 
-export default function NewsItem({ data, setDataInPop, setShowPop }) {
+export default function NewsItem({
+  data, setDataInPop, setShowPop, openDeletePopup
+}) {
   const handleOnClick = () => {
     setDataInPop(data)
     setShowPop(true)
+  }
+
+  const handleOnDelete = () => {
+    openDeletePopup(data.news_ID)
   }
 
   return (
@@ -16,6 +22,11 @@ export default function NewsItem({ data, setDataInPop, setShowPop }) {
         <img src={data.image_link} alt={data.image_link} className="mini-img" />
       </div>
       <div className="content">{data.position}</div>
+      <div className="content">
+        <button type="button" className="btn-cancel delete" onClick={() => handleOnDelete()}>
+          Xóa
+        </button>
+      </div>
     </button>
   )
 }
