@@ -10,7 +10,7 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-#popup-content {
+#popup-contents {
   border-radius: 5px;
   background-color: white;
   margin: auto;
@@ -25,6 +25,25 @@
   overflow: hidden;
   display: flex;
   flex-direction: row;
+}
+
+#popup-content-mini {
+  border-radius: 5px;
+  background-color: white;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid var(--darker_gray);
+  width: 15%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+  color: var(--title_gray);
+  font-weight: 600;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .form-row {

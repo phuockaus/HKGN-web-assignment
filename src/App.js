@@ -17,7 +17,6 @@ import NewsPage from './components/news-page'
 import OrderPage from './components/order-page'
 import AdminPage from './components/admin-page'
 
-
 function App() {
   return (
     <AppProvider>

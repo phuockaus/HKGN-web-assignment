@@ -2,10 +2,16 @@
 import React from 'react'
 import './productItem.css'
 
-export default function ProductItem({ data, setShowPop, setDataInPop }) {
+export default function ProductItem({
+  data, setShowPop, setDataInPop, openDeletePopup
+}) {
   const handleOnClick = () => {
     setDataInPop(data)
     setShowPop(true)
+  }
+
+  const handleOnDelete = () => {
+    openDeletePopup(data.product_ID)
   }
 
   return (
@@ -23,6 +29,11 @@ export default function ProductItem({ data, setShowPop, setDataInPop }) {
       <div className="product-cost content">{parseInt(data.cost, 10)}</div>
       <div className="product-category content">{data.category}</div>
       <div className="product-stock content">{parseInt(data.stock, 10)}</div>
+      <div className="content">
+        <button type="button" className="btn-cancel delete" onClick={() => handleOnDelete()}>
+          Xóa
+        </button>
+      </div>
     </button>
   )
 }

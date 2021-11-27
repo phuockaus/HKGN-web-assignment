@@ -19,7 +19,7 @@
 }
 
 .content {
-  width: 16.66%;
+  width: 14.28%;
   font-weight: bold;
 }
 
@@ -37,4 +37,11 @@
 .mini-img {
   width: 60px;
   height: 60px;
+}
+
+.delete {
+  width: 80px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
 }

@@ -31,3 +31,11 @@ export async function addProduct(input) {
     .catch((error) => console.log(error.data))
   return dataPromise
 }
+
+export async function deleteProduct(productID) {
+  const promise = axios.delete(`http://localhost:3000/product/${productID}`)
+  const dataPromise = promise
+    .then((response) => console.log(response))
+    .catch((error) => console.log(error.data))
+  return dataPromise
+}
