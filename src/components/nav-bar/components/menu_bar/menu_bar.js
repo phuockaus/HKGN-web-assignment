@@ -8,7 +8,7 @@ export default function MenuBar() {
       <div className="blank">|</div>
       <a className="buttons-bar" href="/catalogue">Danh mục sản phẩm</a>
       <div className="blank">|</div>
-      <a className="buttons-bar" href="/login">Tin tức</a>
+      <a className="buttons-bar" href="/news">Tin tức</a>
     </div>
   )
 }

@@ -12,6 +12,8 @@ import Catalogue from './components/product-catalogue'
 import Cart from './components/cart-page'
 import PaymentInfo from './components/payment-page'
 import AccountInfo from './components/account-info'
+import NewsCatalogue from './components/news-catalogue'
+import NewsPage from './components/news-page'
 
 function App() {
   return (
@@ -43,6 +45,11 @@ function App() {
           <Route path="/account-info">
             <AccountInfo />
           </Route>
+          <Route path="/news/:newsid" component={NewsPage} />
+          <Route path="/news">
+            <NewsCatalogue />
+          </Route>
+
         </Switch>
       </Router>
     </AppProvider>

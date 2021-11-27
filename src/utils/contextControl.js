@@ -12,7 +12,7 @@ export const AppProvider = (props) => {
   const [productList, setProductList] = useState()
   const [cart, setCart] = useState([])
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-
+  const [newsList, setNewsList] = useState()
   async function fetchProductList() {
     try {
       const response = await axios.get('http://localhost:3000/product')
@@ -22,9 +22,18 @@ export const AppProvider = (props) => {
       console.log(err)
     }
   }
-
+  async function fetchNews() {
+    try {
+      const response = await axios.get('http://localhost:3000/news')
+      setNewsList(response.data)
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.log(err)
+    }
+  }
   useEffect(() => {
     fetchProductList()
+    fetchNews()
   }, [])
 
   const addItemToCart = (item) => {
@@ -69,6 +78,7 @@ export const AppProvider = (props) => {
       value={{
         cart,
         productList,
+        newsList,
         addItemToCart,
         removeItemFromCart,
         isLoggedIn,

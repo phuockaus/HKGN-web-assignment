@@ -1,0 +1,39 @@
+.newslist-template {
+  float: left;
+  width: 23%;
+  height: auto;
+  padding: 0 1.5% 20px 0;
+  text-decoration: none;
+}
+#newslist-template-container {
+  width: 100%;
+  height: auto;
+  background-color: var(--white_background);
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 2px grey;
+  border: 1px solid var(--white_border);
+}
+#newslist-template-container:hover {
+  cursor: pointer;
+}
+#newslist-template-image {
+  padding: 20px 10px 10px 10px;
+}
+
+#newslist-template-image img {
+  width: 95%;
+  border-bottom: 0.5px solid rgb(182, 182, 182);
+}
+
+#newslist-template-title {
+  font-size: 25px;
+  padding: 2px 15px;
+  text-align: left;
+  color: var(--light_blue);
+}
+
+#newslist-template-content {
+  text-align: justify;
+  padding: 0 15px 25px 15px;
+}
