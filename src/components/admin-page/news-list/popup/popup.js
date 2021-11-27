@@ -4,10 +4,10 @@ import React, { useEffect, useState } from 'react'
 import './popup.css'
 import { CKEditor } from '@ckeditor/ckeditor5-react'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
-import { updateNews, createNews } from '../../../../utils/newsController'
+import { updateNews, createNews, deleteNews } from '../../../../utils/newsController'
 
 export default function Popup({
-  data, showPop, close, isCreating
+  data, showPop, close, isCreating, isDeleting
 }) {
   const [title, setTitle] = useState('')
   const [image, setImage] = useState('')
@@ -32,6 +32,11 @@ export default function Popup({
     setDescription(editor.getData())
   }
 
+  const confirmDelete = () => {
+    deleteNews(data.news_ID)
+    close()
+  }
+
   const handleSave = () => {
     if (isCreating) {
       const input = {
@@ -53,7 +58,21 @@ export default function Popup({
     close()
   }
 
-  return (
+  return isDeleting ? (
+    <div id="popup-container">
+      <div id="popup-content-mini">
+        Bạn muốn xóa tin tức này?
+        <div className="button-container">
+          <button type="button" className="btn" id="btn-save" onClick={() => confirmDelete()}>
+            Xóa
+          </button>
+          <button type="button" className="btn-cancel" id="btn-cancel" onClick={() => close()}>
+            Hủy
+          </button>
+        </div>
+      </div>
+    </div>
+  ) : (
     <div id="popup-container">
       <div id="popup-content">
         <div id="title">Cập nhật tin tức</div>

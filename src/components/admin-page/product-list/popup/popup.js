@@ -2,10 +2,10 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react'
 import './popup.css'
-import updateProduct, { addProduct } from '../../../../utils/productController'
+import updateProduct, { addProduct, deleteProduct } from '../../../../utils/productController'
 
 export default function Popup({
-  data, showPop, close, isCreating
+  data, showPop, close, isCreating, isDeleting
 }) {
   const [productName, setProductName] = useState('')
   const [productID, setProductID] = useState()
@@ -61,9 +61,28 @@ export default function Popup({
     close()
   }
 
-  return (
+  const confirmDelete = () => {
+    deleteProduct(productID)
+    close()
+  }
+
+  return isDeleting ? (
     <div id="popup-container">
-      <div id="popup-content">
+      <div id="popup-content-mini">
+        Bạn muốn xóa sản phẩm này?
+        <div className="button-container">
+          <button type="button" className="btn" id="btn-save" onClick={() => confirmDelete()}>
+            Xóa
+          </button>
+          <button type="button" className="btn-cancel" id="btn-cancel" onClick={() => close()}>
+            Hủy
+          </button>
+        </div>
+      </div>
+    </div>
+  ) : (
+    <div id="popup-container">
+      <div id="popup-contents">
         <div className="form-section">
           <div id="title">Cập nhật sản phẩm</div>
           <div className="form-row">
@@ -125,7 +144,7 @@ export default function Popup({
             </button>
           </div>
         </div>
-        <div className="demo-image">
+        <div className="demo-images">
           <img src={image} alt="hình ảnh demo" className="demo" />
         </div>
       </div>

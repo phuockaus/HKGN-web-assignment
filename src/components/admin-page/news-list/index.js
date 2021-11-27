@@ -6,9 +6,10 @@ import NewsFrame from './news-frame/newsFrame'
 
 export default function NewsList() {
   const [newsList, setNewsList] = useState(null)
-  const [showPop, setShowPop] = useState(false)
+  const [showPopNews, setShowPopNews] = useState(false)
   const [dataInPop, setDataInPop] = useState(null)
   const [isCreating, setIsCreating] = useState(false)
+  const [isDeleting, setIsDeleting] = useState(false)
 
   useEffect(() => {
     getNews().then((newsLst) => {
@@ -17,18 +18,19 @@ export default function NewsList() {
   }, [])
 
   const close = () => {
-    setShowPop(false)
+    setShowPopNews(false)
     setDataInPop(null)
     setIsCreating(false)
+    setIsDeleting(false)
   }
 
   const openCreatePopup = () => {
     setIsCreating(true)
-    setShowPop(true)
+    setShowPopNews(true)
   }
 
   const changePopupState = () => {
-    if (showPop) {
+    if (showPopNews) {
       document.getElementById('popup-container').style.display = 'block'
     } else {
       document.getElementById('popup-container').style.display = 'none'
@@ -39,19 +41,36 @@ export default function NewsList() {
     getNews().then((newsLst) => {
       setNewsList(newsLst)
     })
-  }, [showPop])
+  }, [showPopNews])
 
   useEffect(() => {
     changePopupState()
-  }, [showPop])
+  }, [showPopNews])
+
+  const openDeletePopup = (id) => {
+    setDataInPop(id)
+    setIsDeleting(true)
+    setShowPopNews(true)
+  }
 
   return (
     <div className="container">
       <div id="news-page-title">Danh sách tin tức</div>
       <div id="news-list-frame">
-        <NewsFrame newsList={newsList} setDataInPop={setDataInPop} setShowPop={setShowPop} />
+        <NewsFrame
+          newsList={newsList}
+          setDataInPop={setDataInPop}
+          setShowPop={setShowPopNews}
+          openDeletePopup={openDeletePopup}
+        />
       </div>
-      <Popup close={close} data={dataInPop} showPop={showPop} isCreating={isCreating} />
+      <Popup
+        close={close}
+        data={dataInPop}
+        showPop={showPopNews}
+        isCreating={isCreating}
+        isDeleting={isDeleting}
+      />
       <button onClick={() => openCreatePopup()} type="button" id="add-btn">
         +
       </button>

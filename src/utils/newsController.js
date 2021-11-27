@@ -36,3 +36,12 @@ export async function createNews(input) {
     .catch((error) => console.log(error.data))
   return dataPromise
 }
+
+export async function deleteNews(newsID) {
+  const promise = axios.delete(`http://localhost:3000/news/${newsID}`)
+  const dataPromise = promise
+    .then((response) => response.data)
+    // eslint-disable-next-line no-console
+    .catch((error) => console.log(error.data))
+  return dataPromise
+}
