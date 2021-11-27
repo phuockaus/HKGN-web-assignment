@@ -90,6 +90,12 @@ export default function CartItems() {
     if (itemList) return itemList.map((item) => <ProductInCart props={item} increase={increase} decrease={decrease} remove={removeItem} />)
     return null
   }
+
+  useEffect(() => {
+    if (cart.length === 0) {
+      document.getElementById('buy-button').style.display = 'none'
+    } else document.getElementById('buy-button').style.display = 'block'
+  }, [cart])
   return (
     <div id="cart-list-container">
       <div id="cart-list-title">Giỏ hàng của tôi</div>
@@ -112,8 +118,8 @@ export default function CartItems() {
           </span>
         </div>
         <div className="hr" />
-        <a href="/catalogue" className="btn" id="buy-button">Tiếp tục mua sắm</a>
-        <a href="/payment" className="btn" id="continue-shopping-button">Thanh toán</a>
+        <a href="/catalogue" className="btn" id="continue-shopping-button">Tiếp tục mua sắm</a>
+        <a href="/payment" className="btn" id="buy-button">Thanh toán</a>
       </div>
     </div>
   )

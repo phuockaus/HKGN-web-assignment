@@ -7,6 +7,8 @@ import Main from './components/main/main'
 
 export default function PaymentInfo() {
   if (!Cookies.get('accountID')) return <Redirect to="/login" />
+  const cart = JSON.parse(Cookies.get('cart'))
+  if (cart.length === 0) return <Redirect to="/cart" />
   return (
     <div>
       <Navbar />

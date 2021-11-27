@@ -4,15 +4,13 @@ import ProductCartTemplate from '../product-template/template'
 import './product_list.css'
 
 export default function ProductInCartList({
-  products, totalPrice, amount, discount
+  products, totalPrice, getFinalDiscount, getFinalPrice
 }) {
   const getProductList = () => {
     if (products) return products.map((product) => <ProductCartTemplate props={product} />)
     return null
   }
-  const getFinalDiscount = () => amount * 200 * Number(discount)
-  // eslint-disable-next-line max-len
-  const getFinalPrice = () => ((getFinalDiscount() > totalPrice) ? 0 : (totalPrice - getFinalDiscount()))
+
   return (
     <div id="product-list-cart-container">
       <div id="product-list-cart-header">

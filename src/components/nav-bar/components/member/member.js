@@ -9,10 +9,13 @@ import logout from '../../../../utils/logout'
 
 export default function MemberButtons() {
   const name = `${decode(Cookies.get('firstName'))} ${decode(Cookies.get('lastName'))}`
+  const role = String(decode(Cookies.get('role')))
   return (
     <div id="member-buttons">
       <div id="cart-member-button">
-        <Link to="/cart"><FontAwesomeIcon icon={faCartPlus} id="cart-member-icon" /></Link>
+        <Link to="/cart">
+          <FontAwesomeIcon icon={faCartPlus} id="cart-member-icon" />
+        </Link>
       </div>
       <div id="user-button">
         <FontAwesomeIcon icon={faUser} id="user-icon" />
@@ -20,7 +23,8 @@ export default function MemberButtons() {
           <div id="member-name">{name}</div>
           <div id="drop-down-member">
             <a href="/account-info">Thông tin tài khoản</a>
-            <a href="/">Đơn hàng của tôi</a>
+            {role === 'admin' ? <a href="/admin-page">Trang quản lý</a> : <></>}
+            <a href="/order">Đơn hàng của tôi</a>
             <a href="/" onClick={logout}>
               Đăng xuất
             </a>

@@ -38,6 +38,7 @@
   float: left;
   text-decoration: none;
   line-height: 30px;
+  border: none;
 }
 #submit-note-payment-btn2 {
   display: block;

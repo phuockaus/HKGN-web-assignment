@@ -55,7 +55,7 @@
   color: var(--dark_blue);
   margin-right: 1%;
 }
-#buy-button {
+#continue-shopping-button {
   width: 20%;
   margin: 20px 3%;
   display: block;
@@ -64,10 +64,10 @@
   font-size: 16px;
   float: left;
 }
-#continue-shopping-button {
+#buy-button {
   width: 20%;
   margin: 20px 3%;
-  display: block;
+  display: none;
   padding: 18px 24px;
   text-decoration: none;
   font-size: 16px;

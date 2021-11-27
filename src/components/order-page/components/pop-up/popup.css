@@ -1,0 +1,62 @@
+#order-pop-up-container {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#order-pop-up-content {
+  border-radius: 5px;
+  background-color: white;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid var(--darker_gray);
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+  color: var(--title_gray);
+  font-weight: 600;
+  overflow: hidden;
+}
+#address-bar-order {
+  font-size: 14px;
+  overflow: hidden;
+}
+#address-bar-order-title {
+  width: 50%;
+  float: left;
+}
+#address-bar-order-address {
+  color: var(--dark_blue);
+}
+#order-status {
+  width: 50%;
+  float: right;
+  text-align: right;
+}
+#address-bar-order-status {
+  color: var(--dark_blue);
+}
+#detail-order-list-item {
+  display: none;
+  overflow: hidden;
+  margin-top: 10px;
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+}
+#close-detail-btn-area {
+  margin-top: 10px;
+  text-align: right;
+  width: 100%;
+}
+#close-detail-btn {
+  border: none;
+  padding: 12px 18px;
+  width: 20%;
+}
