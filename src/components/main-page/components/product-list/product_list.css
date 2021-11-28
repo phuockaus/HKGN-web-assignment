@@ -3,6 +3,7 @@
   min-height: 200px;
   overflow: hidden;
   border-radius: 5px 0 0 0;
+  margin: auto;
 }
 
 #best-products-area-title {
@@ -16,4 +17,5 @@
 
 #best-products-items {
   padding-top: 20px;
+  margin: auto;
 }
