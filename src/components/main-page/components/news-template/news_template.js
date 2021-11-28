@@ -1,13 +1,17 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './news_template.css'
 
-// eslint-disable-next-line react/prop-types
 export default function NewsTemplate({ prop }) {
+  const url = `/news/${prop.ID}`
   return (
-    <div className="news-template">
-      <div id="news-template-content">
-        {prop}
+    <Link to={url}>
+      <div className="news-template">
+        <div id="news-template-content">
+          <img src={prop.image_link} alt="img" className="news_img" />
+        </div>
       </div>
-    </div>
+    </Link>
   )
 }
