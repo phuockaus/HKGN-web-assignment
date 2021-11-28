@@ -15,12 +15,8 @@ export default function NewsTemplate({ prop }) {
           <img src={prop.image_link} alt="newslist_img" />
         </div>
         <div id="newslist-info-container">
-          <div id="newslist-title">
-            {prop.title}
-          </div>
-          <div id="newslist-content">
-            {ReactHtmlParser(shortContent)}
-          </div>
+          <div id="newslist-title">{prop.title}</div>
+          <div id="newslist-content">{ReactHtmlParser(shortContent)}</div>
         </div>
       </div>
     </Link>

@@ -20,6 +20,7 @@
   height: 80px;
   background-image: linear-gradient(var(--dark_blue), var(--light_blue));
   position: fixed;
+  z-index: 20;
 }
 
 #logo {

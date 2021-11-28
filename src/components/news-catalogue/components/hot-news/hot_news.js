@@ -20,9 +20,7 @@ export default function NewsTemplate({ prop }) {
             {prop.title}
           </Link>
         </div>
-        <div id="hotnews-template-content">
-          {ReactHtmlParser(shortContent)}
-        </div>
+        <div id="hotnews-template-content">{ReactHtmlParser(shortContent)}</div>
       </div>
     </div>
   )

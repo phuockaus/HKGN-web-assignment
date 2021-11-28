@@ -74,6 +74,9 @@ export default function NewsFeed() {
   return (
     <div id="news-feed">
       <div id="main-news">
+        <div id="main-news-area-title">
+          Tin nổi bật / Ưu đãi
+        </div>
         <div id="main-news-content">
           <div id="main-feed">
             <Link to={`/news/${hotNews.ID}`}>

@@ -39,7 +39,9 @@ export default function Main() {
   const showHotNews = () => {
     if (newsList) {
       for (let i = 0; i < newsList.length; i += 1) {
-        if (newsList[i].position === '1') return <HotNewsTemplate prop={newsList[i]} />
+        if (newsList[i].position === '1') {
+          return <HotNewsTemplate prop={newsList[i]} />
+        }
       }
     }
     return null
@@ -49,12 +51,8 @@ export default function Main() {
     <div id="news-container">
       <div id="news-contain">
         <div id="news-title">Tin tức</div>
-        <div id="hot-news">
-          {showHotNews()}
-        </div>
-        <div id="news-list">
-          {showNewsList()}
-        </div>
+        <div id="hot-news">{showHotNews()}</div>
+        <div id="news-list">{showNewsList()}</div>
       </div>
     </div>
   )
