@@ -91,13 +91,27 @@ export default function Popup({
         </div>
         <div className="editor">
           <div className="label label-right">Nội dung bài viết</div>
-          <CKEditor editor={ClassicEditor} data={description} onChange={handleEditorChange} />
+          <CKEditor
+            editor={ClassicEditor}
+            data={description}
+            onChange={handleEditorChange}
+          />
         </div>
         <div className="button-container">
-          <button type="button" className="btn" id="btn-save" onClick={() => handleSave()}>
+          <button
+            type="button"
+            className="btn"
+            id="btn-save"
+            onClick={() => handleSave()}
+          >
             Lưu
           </button>
-          <button type="button" className="btn-cancel" id="btn-cancel" onClick={() => close()}>
+          <button
+            type="button"
+            className="btn-cancel"
+            id="btn-cancel"
+            onClick={() => close()}
+          >
             Hủy
           </button>
         </div>
