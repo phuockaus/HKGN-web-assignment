@@ -1,0 +1,17 @@
+#product-template-cart-container {
+  height: 20px;
+  overflow: hidden;
+  margin-top: 10px;
+  padding: 5px 3%;
+  border-radius: 3px;
+}
+#product-template-cart-name {
+  float: left;
+  line-height: 20px;
+  font-size: 14px;
+}
+#product-template-cart-total {
+  float: right;
+  font-size: 14px;
+  line-height: 20px;
+}

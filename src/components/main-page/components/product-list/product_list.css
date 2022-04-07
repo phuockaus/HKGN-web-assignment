@@ -1,0 +1,21 @@
+#best-products-list {
+  width: 100%;
+  min-height: 200px;
+  overflow: hidden;
+  border-radius: 5px 0 0 0;
+  margin: auto;
+}
+
+#best-products-area-title {
+  padding: 8px;
+  font-size: 16px;
+  background-image: linear-gradient(var(--dark_blue), var(--light_blue));
+  border-radius: 5px;
+  box-shadow: 0 0 2px grey;
+  width: 25%;
+}
+
+#best-products-items {
+  padding-top: 20px;
+  margin: auto;
+}

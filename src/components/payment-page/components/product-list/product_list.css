@@ -1,0 +1,70 @@
+#product-list-cart-container {
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+#product-list-cart-header {
+  margin-bottom: 10px;
+  width: 96%;
+  margin: auto;
+  overflow: hidden;
+}
+#empty-title {
+  min-width: 48%;
+  padding: 0 1%;
+  float: left;
+  font-weight: 600;
+  overflow: hidden;
+}
+#product-cart-list-content {
+  width: 100%;
+}
+
+#temp-total {
+  overflow: hidden;
+  line-height: 20px;
+}
+#temp-total-title {
+  width: 30%;
+  float: left;
+  font-weight: 500;
+  margin: 5px 3%;
+}
+#temp-total-price {
+  width: 50%;
+  float: right;
+  text-align: right;
+  margin: 5px 3%;
+}
+#temp-discount {
+  overflow: hidden;
+}
+#temp-discount-title {
+  width: 30%;
+  float: left;
+  font-weight: 500;
+  margin: 5px 3%;
+}
+#temp-discount-price {
+  width: 50%;
+  float: right;
+  text-align: right;
+  margin: 5px 3%;
+}
+#final-total {
+  overflow: hidden;
+}
+#final-total-title {
+  width: 30%;
+  float: left;
+  font-weight: bold;
+  margin: 5px 3%;
+}
+#final-total-price {
+  width: 50%;
+  float: right;
+  text-align: right;
+  margin: 5px 3%;
+  font-size: 20px;
+  font-weight: bold;
+}

@@ -1,0 +1,11 @@
+main {
+  margin-left: 10rem;
+  padding: 1rem;
+}
+
+.navBar {
+  width: 5rem;
+  height: 100vh;
+  background-color: #000;
+  position: fixed;
+}

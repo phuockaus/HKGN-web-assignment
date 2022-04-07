@@ -1,0 +1,23 @@
+#table-title {
+  padding-bottom: 10px;
+  box-shadow: 0 0 2px gray;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 50px;
+}
+
+#news-frame-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 600;
+  color: var(--dark_gray);
+  width: 20%;
+  text-align: center;
+}

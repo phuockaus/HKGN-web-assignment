@@ -1,0 +1,66 @@
+#member-buttons {
+  height: 80px;
+  margin-top: 25px;
+}
+#user-button {
+  float: left;
+  margin-left: 20px;
+}
+#user-icon {
+  margin-top: 3px;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+#drop-down-info {
+  float: right;
+  width: 150px;
+}
+#member-name {
+  line-height: 40px;
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+#cart-member-button {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  float: left;
+}
+
+#cart-member-icon {
+  width: 40px;
+  height: 40px;
+  color: black;
+}
+
+#cart-member-icon:hover {
+  color: var(--darker_gray);
+}
+
+#drop-down-member {
+  display: none;
+  background-color: #f9f9f9;
+  width: 150px;
+  box-shadow: 0 0 2px gray;
+  border-radius: 3px;
+}
+#drop-down-member a {
+  color: black;
+  font-size: 12px;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+}
+#drop-down-info a:hover {
+  background-color: var(--light_blue);
+  transition: all 0.15s;
+}
+
+#drop-down-info:hover #drop-down-member {
+  display: block;
+  animation: fadeIn 0.15s;
+}

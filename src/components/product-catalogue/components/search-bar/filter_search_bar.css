@@ -1,0 +1,50 @@
+#filter-search-bar-area {
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 0 2px grey;
+  overflow: hidden;
+}
+#search-bar-area {
+  width: 85%;
+}
+#filter-bar-area {
+  margin-top: 0.7em;
+}
+#category-container {
+  font-size: 12px;
+  box-shadow: 0 0 2px grey;
+  padding: 1em;
+  border-radius: 5px;
+}
+#category-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--dark_blue);
+}
+#filter-cost-area {
+  display: block;
+  margin: 0.7em 0;
+  cursor: pointer;
+}
+#filter-rate-area {
+  margin: 0.7em 0;
+  cursor: pointer;
+}
+#filter-search {
+  width: 45%;
+  float: left;
+  display: block;
+  padding: 6px 15px;
+  margin: 0 2.5%;
+  /* border: 1px solid black; */
+  border: none;
+}
+#filter-reset {
+  width: 45%;
+  float: left;
+  display: block;
+  padding: 6px 15px;
+  margin: 0 2.5%;
+  /* border: 1px solid black; */
+  border: none;
+}

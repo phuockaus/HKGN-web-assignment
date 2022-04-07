@@ -1,0 +1,15 @@
+#Header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(var(--dark_blue), var(--light_blue));
+    justify-content: center;
+}
+
+#Logo{
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    border-radius:50%;
+}

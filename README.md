@@ -36,3 +36,13 @@ Cách tạo pull request, viết tắt là PR:
 3. Bấm create pull request.
 4. Ở phía bên phải màn hình, chọn người reviewer là Nam và assignee là mình.
    Làm xong rồi thì không làm gì nữa cả, để việc còn lại cho Nam :vv.
+
+**V. Coding convention:**
+Coding convention hay dịch dân dã là bộ quy tắc ứng xử giống con người trong lúc code.
+Sau đây là hướng dẫn mục đích ra đời của 1 số folder:
+
+1. Folder Components là folder chứa các thành phần cấu thành nên app. Mỗi khi có 1 page mới, hãy tạo 1 folder con bên trong chứa tất cả phần code của page đó và các component đi kèm. trong này đã có 1 ví dụ đó là main page. mỗi thư mục như vậy có 1 file index.js.
+2. Folder style chứa 2 file color và styling, 2 file này chứa tất cả các biến số về màu sắc và các chỉ số css.
+3. Folder ultis là folder chứa các file đa dụng và được gọi liên tục như cấc controller của các database.
+
+Tiếp theo, chúng ta đến việc chạy lệnh trong app: chỉ sử dụng yarn add để cài đặt các package, không sử dụng npm để cài đặt. Start ứng dụng cũng sử dụng yarn start, không nên dùng npm start.

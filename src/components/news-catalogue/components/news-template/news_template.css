@@ -1,0 +1,43 @@
+.newslist-template {
+  width: 10px;
+  height: 10px;
+  align-items: center;
+  text-decoration: none;
+}
+#newslist-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--white_background);
+  border-top: 2px solid var(--light_blue);
+}
+#newslist-container:hover {
+  cursor: pointer;
+}
+#newslist-image {
+  padding: 20px 10px 10px 10px;
+  float: left;
+}
+
+#newslist-image img {
+  width: 310px;
+  height: auto;
+}
+#newslist-info-container {
+  justify-content: top;
+  width: 62%;
+  float: left;
+  padding: 13px 10px 10px 10px;
+}
+#newslist-title {
+  font-size: 25px;
+  padding: 0px 15px;
+  text-align: left;
+  color: var(--light_blue);
+}
+
+#newslist-content {
+  text-align: justify;
+  font-size: 15px;
+  padding: 0 15px 25px 15px;
+}

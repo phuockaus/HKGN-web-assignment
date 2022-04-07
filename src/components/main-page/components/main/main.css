@@ -1,0 +1,19 @@
+#home-page-container {
+  padding: 100px 0 40px;
+  min-height: 700px;
+  /* background-image: url('../assets/background.jpg'); */
+  background-repeat: round;
+}
+#home-page-content {
+  width: 75%;
+  margin: auto;
+}
+
+#news-feed-container {
+  width: 100%;
+  height: 250px;
+}
+
+#best-products-list-container {
+  width: 100%;
+}

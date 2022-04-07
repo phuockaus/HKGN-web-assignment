@@ -1,0 +1,68 @@
+#address-bar-container {
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 0 0 1px gray;
+}
+#address-bar-address-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+#address-bar-col-1 {
+  float: left;
+  width: 30%;
+  font-size: 14px;
+}
+#address-bar-title-1 {
+  float: left;
+  width: 40%;
+  color: var(--darker_gray);
+  margin-bottom: 3px;
+}
+#address-user-name {
+  float: left;
+  width: 60%;
+  font-weight: 600;
+  color: var(--dark_blue);
+  margin-bottom: 3px;
+}
+#address-bar-title-2 {
+  float: left;
+  width: 40%;
+  color: var(--darker_gray);
+}
+#address-phone-number {
+  float: left;
+  width: 60%;
+  font-weight: 600;
+  color: var(--dark_blue);
+}
+#address-bar-col-2 {
+  float: left;
+  width: 70%;
+  font-size: 14px;
+}
+#address-bar-title-3 {
+  color: var(--darker_gray);
+  margin-bottom: 3px;
+}
+#address-bar-address {
+  float: left;
+  width: 80%;
+  font-weight: 600;
+  color: var(--dark_blue);
+  text-align: justify;
+}
+#payment-edit-address {
+  display: block;
+  /* text-decoration: none; */
+  color: black;
+  float: left;
+  width: 10%;
+  text-align: center;
+}
+#payment-edit-address:hover {
+  color: red;
+  transition: all 0.15s;
+}

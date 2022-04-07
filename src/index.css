@@ -1,0 +1,114 @@
+:root {
+  --dark_blue: #6488ff;
+  --dark_red: rgb(230, 0, 0);
+  --light_blue: rgb(151, 196, 255);
+  --lighter_blue: rgb(212, 231, 255);
+  --light_red: rgb(255, 77, 77);
+  --darker_gray: rgb(70, 70, 70);
+  --dark_gray: rgb(110, 110, 110);
+  --light_gray: rgb(236, 236, 236);
+  --title_gray: #3b414b;
+  --white_background: #f6f7f9;
+  --text_form: #748194;
+  --button_grey: rgb(85, 85, 85);
+  --button_grey_hover: #a3a3a3;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--white_background);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--dark_blue);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.btn {
+  font-weight: bold;
+  border-radius: 2px;
+  background-color: var(--dark_blue);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: var(--light_blue);
+  color: black;
+  transition: all 0.25s;
+}
+
+.btn-cancel {
+  font-weight: bold;
+  border-radius: 2px;
+  background-color: var(--dark_red);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-cancel:hover {
+  background-color: var(--light_red);
+  color: black;
+  transition: all 0.25s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

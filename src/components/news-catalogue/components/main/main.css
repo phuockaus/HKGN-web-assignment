@@ -1,0 +1,24 @@
+#news-container {
+  padding-top: 100px;
+}
+#news-contain {
+  width: 70%;
+  margin: auto;
+}
+#news-title {
+  margin-left: 3%;
+  font-size: 24px;
+  font-weight: 600;
+  background-image: linear-gradient(var(--dark_blue), white);
+  padding: 12px 16px;
+  width: 30%;
+  box-sizing: 0 0 1px gray;
+  border-radius: 3px;
+}
+#news-list {
+  width: 75%;
+  margin: auto;
+}
+#hot-news {
+  margin: auto;
+}
